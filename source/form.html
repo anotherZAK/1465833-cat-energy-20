@@ -4,15 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин фитнес еды для котиков</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body class="page-body">
   <header class="page-header">
     <div class="container">
       <a class="page-header__logo" href="index.html"><img src="https://via.placeholder.com/150x150"
           alt="Логотип интернет-магазина"></a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
@@ -39,20 +40,20 @@
           <fieldset class="filter-item">
             <ul class="form-list cat-data-list">
               <li class="cat-data-list__item">
-                <label class="fiter-text fiter-text--cat-name">
-                  <span>Имя:*</span>
+                <label class="filter-text filter-text--cat-name">
+                  <span class="filter-text__data">Имя:*</span>
                   <input type="text" name="cat-name" placeholder="Барсик" required>
                 </label>
               </li>
               <li class="cat-data-list__item">
-                <label class="fiter-text fiter-text--cat-weight">
-                  <span>Вес (кг):*</span>
+                <label class="filter-text filter-text--cat-weight">
+                  <span class="filter-text__data">Вес (кг):*</span>
                   <input type="text" name="cat-weight" placeholder="7" required>
                 </label>
               </li>
               <li class="cat-data-list__item">
-                <label class="fiter-text fiter-text--cat-age">
-                  <span>Возраст (лет):*</span>
+                <label class="filter-text filter-text--cat-age">
+                  <span class="filter-text__data">Возраст (лет):*</span>
                   <input type="text" name="cat-age" placeholder="7" required>
                 </label>
               </li>
@@ -61,21 +62,21 @@
           <fieldset class="filter-item">
             <ul class="form-list programm-list">
               <li class="programm-list__item">
-                <label class="fiter-radio">
+                <label class="filter-radio">
                   <input type="radio" name="programm-type" value="slim" checked>
-                  <span>Похудение</span>
+                  <span class="filter-radio__data">Похудение</span>
                 </label>
               </li>
               <li class="programm-list__item">
-                <label class="fiter-radio">
+                <label class="filter-radio">
                   <input type="radio" name="programm-type" value="gain">
-                  <span>Набор массы</span>
+                  <span class="filter-radio__data">Набор массы</span>
                 </label>
               </li>
               <li class="programm-list__item">
-                <label class="fiter-radio">
+                <label class="filter-radio">
                   <input type="radio" name="programm-type" value="dont-know">
-                  <span>Не знаю (Нужен ваш совет)</span>
+                  <span class="filter-radio__data">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -85,13 +86,13 @@
             <ul class="form-list user-list">
               <li class="user-list__item">
                 <label class="filter-text">
-                  <span>Email:*</span>
+                  <span class="filter-text__data">Email:*</span>
                   <input type="email" name="user-email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="user-list__item">
                 <label class="filter-text">
-                  <span>Телефон:*</span>
+                  <span class="filter-text__data">Телефон:*</span>
                   <input type="tel" name="user-tel" placeholder="8 (960) 900-60-90" required>
                 </label>
               </li>
@@ -107,34 +108,32 @@
             <legend class="filter-item__legend">Дополнительно</legend>
             <ul class="form-list extra-option-list">
               <li class="extra-option-list__item">
-                <label class="filter-radio">
+                <label class="filter-checkbox">
                   <input type="checkbox" name="sweetener" checked>
-                  <span>Cахарозаменитель</span>
+                  <span class="filter-checkbox__data">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="extra-option-list__item">
-                <label class="filter-radio">
+                <label class="filter-checkbox">
                   <input type="checkbox" name="water">
-                  <span>Питьевая вода</span>
+                  <span class="filter-checkbox__data">Питьевая вода</span>
                 </label>
               </li>
               <li class="extra-option-list__item">
-                <label class="filter-radio">
+                <label class="filter-checkbox">
                   <input type="checkbox" name="milk">
-                  <span>Молоко</span>
+                  <span class="filter-checkbox__data">Молоко</span>
                 </label>
               </li>
               <li class="extra-option-list__item">
-                <label class="filter-radio">
+                <label class="filter-checkbox">
                   <input type="checkbox" name="vitamins">
-                  <span>Витамины</span>
+                  <span class="filter-checkbox__data"s>Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <label>
-            <input class="btn btn--filter-submit" type="submit" value="Отправить заявку">
-          </label>
+          <button class="btn btn--filter-submit" type="submit">Отправить заявку</button>
           <p class="selection__explanation">* — Обязательные поля</p>
         </form>
       </section>
