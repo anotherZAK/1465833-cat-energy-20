@@ -65,4 +65,18 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .advantages__title {
+    margin-bottom: 183px;
+  }
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+  }
+  .advantages__item:nth-child(n+3)::before {
+    top: -120px;
+  }
+}
+
 

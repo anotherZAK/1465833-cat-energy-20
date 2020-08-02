@@ -1,3 +1,4 @@
+
 .catalog__title {
   font-size: 36px;
   line-height: 36px;
@@ -5,6 +6,7 @@
 
 .catalog__list {
   list-style: none;
+  text-align: center;
 }
 
 .catalog__item {
@@ -18,7 +20,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
-  .catalog__item {
+  .catalog__item:not(:last-child) {
     background-color: @basic-grey;
     border: none;
   }

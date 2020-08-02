@@ -1,11 +1,37 @@
 .example__title {
+  margin: 0;
   font-size: 36px;
   line-height: 40px;
 }
 
 .example__info {
+  margin: 0;
   font-family: Arial;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+}
+
+
+@media (min-width: @tablet-width) {
+  .example-result,
+  .example__title,
+  .example__info {
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .example__info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .example-result {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }

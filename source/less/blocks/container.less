@@ -1,20 +1,46 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
   min-width: 320px;
 }
 
-.container--green {
-  min-width: auto;
+.container__promo {
+  margin-bottom: 90px;
+  min-height: 320px;
+  background-color: @basic-green;
+  background-image: url("../../img/jpg/index-background-mobile@1x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container--no-borders {
   padding: 0;
+}
+
+.container__example {
+  background-color: #EAEAEA;
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    width: 768px;
+    padding-right: 30px;
+    padding-left: 30px;
+    min-width: 768px;
+  }
+  .container__promo {
+    min-height: auto;
+    margin: 0 auto;
+    background-color: transparent;
+    background-image: none;
+  }
+  .container--no-borders {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container__promo {
+      position: relative;
   }
 }

@@ -1,3 +1,8 @@
+.extra-goods__item {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
 .extra-goods__title {
   font-size: 24px;
   line-height: 24px;
@@ -6,17 +11,44 @@
 .extra-product__title {
   font-size: 16px;
   line-height: 16px;
+  text-align: center;
   text-transform: uppercase;
   color: #222222;
 }
 
 .extra-product__data {
+  margin: 0 auto;
   font-size: 14px;
   color: #444444;
 }
 
 .extra-goods__profit {
+  min-height: 289px;
   color: #ffffff;
   background-color: @basic-green;
   background-image: url(../../img/jpg/gift-photo-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .extra-product__order {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 7px 220px;
+    width: 632px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-product__order {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    padding: 7px 26px;
+    width: 240px;
+  }
 }
