@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -11,10 +12,10 @@
   <header class="page-header">
     <div class="container">
       <section class="header">
-        <a class="page-header__logo" href=""><img src="img/svg/logo-mobile.svg"
+        <a class="page-header__logo" href=""><img src="img/svg/logo-mobile.svg" width="191" height="38"
             alt="Логотип интернет-магазина"></a>
         <nav class="main-nav">
-          <button class="burger burger--closed" type="button">
+          <button class="burger burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
@@ -83,14 +84,14 @@
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
             часов в день.</p>
           <div class="example-result">
-            <fieldset class="example-result__data">
-              <p class="example-result__info">5 кг</p>
-              <legend class="example-result__title">снижение веса</legend>
-            </fieldset>
-            <fieldset class="example-result__data">
-              <p class="example-result__info">60 дней</p>
-              <legend class="example-result__title">затрачено времени</legend>
-            </fieldset>
+            <ul class="example-result__list">
+              <li class="example-result__item">
+                <p class="example-result__info">5 кг</p>
+              </li>
+              <li class="example-result__item">
+                <p class="example-result__info">60 дней</p>
+              </li>
+            </ul>
           </div>
           <div class="example__slider">
             <img class="example-slide example-slide--before example-slide__current"

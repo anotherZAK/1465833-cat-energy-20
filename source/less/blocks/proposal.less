@@ -1,20 +1,26 @@
+.proposal {
+  margin-bottom: 27px;
+}
+
 .proposal__list {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .proposal__link {
+  margin-bottom: 22px;
   padding-left: 61px;
   padding-right: 51px;
 }
 
 .proposal__item {
+  margin-bottom: 20px;
   background-color: @basic-grey;
   z-index: 1;
-}
-
-.pattern__title {
-  position: relative;
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .proposal__item:nth-child(1) .pattern__title::before {
@@ -36,6 +42,9 @@
   .proposal__link {
     position: absolute;
     top: -600px;
+  }
+  .proposal__item {
+    margin-bottom: 30px;
   }
 }
 
