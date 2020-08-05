@@ -1,3 +1,7 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
   display: flex;
   flex-direction: column;
@@ -13,8 +17,15 @@
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
   border-bottom: 1px solid #e6e6e6;
+}
+
+.main-nav__link:hover {
+  opacity: 0.6;
+}
+
+.main-nav__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -39,5 +50,12 @@
     min-width: 720px;
     min-height: 696px;
     background-image: url(../../img/jpg/index-background-desktop@1x.jpg);
-}
+  }
+  .main-nav__link {
+      color: #ffffff;
+  }
+    .main-nav__item--current {
+      padding-bottom: 8px;
+      border-bottom: 2px solid #ffffff;
+    }
 }

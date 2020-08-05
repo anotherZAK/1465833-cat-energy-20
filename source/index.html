@@ -9,23 +9,23 @@
 
 <body class="page-body">
   <header class="page-header">
-    <div class="container container--no-borders">
+    <div class="container">
       <section class="header">
-        <a class="page-header__logo" href=""><img src="https://via.placeholder.com/150x150"
+        <a class="page-header__logo" href=""><img src="img/svg/logo-mobile.svg"
             alt="Логотип интернет-магазина"></a>
         <nav class="main-nav">
-          <button class="burger" type="button">
+          <button class="burger burger--closed" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
-              <a>Главная</a>
+              <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
+              <a href="form.html" class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -34,8 +34,8 @@
   </header>
 
   <main class="page-main">
-    <div class="container container--no-borders">
-      <div class="container__promo">
+    <div class="background-wrapper background-wrapper--promo">
+      <div class="container container--promo">
         <section class="promo">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
@@ -75,8 +75,8 @@
         </ul>
       </section>
     </div>
-    <div class="container container--no-borders">
-      <div class="container__example">
+    <div class="background-wrapper background-wrapper--example">
+      <div class="container">
         <section class="example">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__info">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
@@ -109,16 +109,20 @@
   </main>
 
   <footer class="page-footer">
-    <div class="container container--no-borders">
+    <div class="container">
       <section class="page-footer__contacts">
         <div class="contacts">
           <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </section>
-      <iframe class="page-footer__map"
+    </div>
+    <section class="page-footer__map">
+      <iframe
         src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad548a777fe29b6fe3e02689a99d7d4d2146ceb5eaa612ce304c7f280ecb05635&amp;source=constructor"
         title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    </section>
+    <div class="container">
       <section class="page-footer__info">
         <div class="footer-info">
           <a class="footer-info__logo"><img src="https://via.placeholder.com/150x150"
