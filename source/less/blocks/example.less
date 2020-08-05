@@ -1,21 +1,43 @@
 .example__title {
   margin: 0;
+  margin-bottom: 33px;
+  padding-top: 27px;
   font-size: 36px;
   line-height: 40px;
 }
 
 .example__info {
   margin: 0;
+  margin-bottom: 25px;
   font-family: Arial;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
 }
 
+.example-result__list {
+  list-style: none;
+}
+
+.example-result__item {
+  position: relative;
+}
+
+.example-result__info {
+  padding: 10px;
+  border: 1px solid black;
+  .example-result__item:nth-child(1) &::after {
+    position: absolute;
+    content: "Текст";
+    top: 30px;
+    background-color: #eaeaea;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .example__title,
-  .example__info, 
+  .example__info,
   .example-result {
     background-color: #ffffff;
   }
