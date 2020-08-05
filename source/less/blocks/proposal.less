@@ -1,9 +1,16 @@
 .proposal__list {
+  padding: 0;
   list-style: none;
+}
+
+.proposal__link {
+  padding-left: 61px;
+  padding-right: 51px;
 }
 
 .proposal__item {
   background-color: @basic-grey;
+  z-index: 1;
 }
 
 .pattern__title {
@@ -20,5 +27,33 @@
   width: 67px;
   height: 28px;
   background-image: url(../../img/svg/icon-cat-pro.svg);
+}
+
+@media (min-width:@tablet-width) {
+  .proposal {
+    position: relative;
+  }
+  .proposal__link {
+    position: absolute;
+    top: -600px;
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .proposal__link {
+    position: absolute;
+    top: -400px;
+  }
+  .proposal__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .proposal__item {
+    flex-basis: 570px;
+  }
+  .proposal__item:nth-child(2n+1)
+  {
+    margin-right: 80px;
+  }
 }
 

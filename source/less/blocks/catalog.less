@@ -1,8 +1,40 @@
+
 .catalog__title {
   font-size: 36px;
   line-height: 36px;
 }
 
 .catalog__list {
+  padding: 0;
   list-style: none;
+  text-align: center;
+}
+
+.catalog__item {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .catalog__item:not(:last-child) {
+    background-color: @basic-grey;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+  .catalog__item {
+    background-color: @basic-grey;
+  }
 }
