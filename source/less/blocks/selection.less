@@ -1,16 +1,48 @@
 .selection__title {
+  margin: 0;
+  margin-bottom: 54px;
   font-size: 36px;
   line-height: 36px;
 }
 
-.selection__text {
+.selection__questionary-text {
+  margin: 0;
+  margin-bottom: 66px;
+  max-width: 226px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.selection__explanation {
+@media (min-width: @desktop-width) {
+    .selection__form-cat-data-grid {
+      display: flex;
+    }
+}
+
+.selection__form-submit {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+  border: none;
+}
+
+.selection__form-explanation {
   font-style: "Arial";
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .selection__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .selection__questionary-text {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

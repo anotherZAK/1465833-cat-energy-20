@@ -1,5 +1,6 @@
-
 .catalog__title {
+  margin: 0;
+  margin-bottom: 164px;
   font-size: 36px;
   line-height: 36px;
 }
@@ -11,6 +12,7 @@
 }
 
 .catalog__item {
+  margin-bottom: 20px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ebebeb;
 }
@@ -21,6 +23,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
+
   .catalog__item:not(:last-child) {
     background-color: @basic-grey;
     border: none;
@@ -34,6 +37,7 @@
     column-gap: 80px;
     row-gap: 63px;
   }
+
   .catalog__item {
     background-color: @basic-grey;
   }

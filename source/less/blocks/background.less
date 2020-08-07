@@ -1,17 +1,22 @@
 .background-wrapper--promo {
-    background-color: @basic-green;
-    background-image: url("../../img/jpg/index-background-mobile@1x.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
+  background-color: @basic-green;
+  background-image: url("../../img/jpg/index-background-mobile@1x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2ddpx) {
+    background-image: url("../../img/jpg/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .background-wrapper--example {
-    background-color: #EAEAEA;
+  background-color: #EAEAEA;
 }
 
 @media (min-width: @tablet-width) {
-    .background-wrapper--promo {
-        background-color: transparent;
-        background-image: none;
-    }
+  .background-wrapper--promo {
+    background-color: transparent;
+    background-image: none;
+  }
 }

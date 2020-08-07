@@ -1,6 +1,32 @@
 .filter-text {
+  display: flex;
+  align-items: baseline;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+}
+
+.filter-text__name {
+  margin-right: 14px;
+}
+
+.filter-text__data {
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 7px;
+  flex-grow: 1;
+  font-family: inherit;
+  text-transform: inherit;
+  border: 1px solid #e7e7e7;
+  &--user-data {
+    border-color: #cdcdcd;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .filter-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

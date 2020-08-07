@@ -16,30 +16,77 @@
 }
 
 .example-result__list {
+  display: flex;
+  padding: 0;
   list-style: none;
 }
 
 .example-result__item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 31px;
+  }
 }
 
 .example-result__info {
-  padding: 10px;
-  border: 1px solid black;
-  .example-result__item:nth-child(1) &::after {
+  padding-top: 15px;
+  padding-right: 24px;
+  padding-bottom: 17px;
+  padding-left: 24px;
+  width: 124px;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &::after {
     position: absolute;
-    content: "Текст";
-    top: 30px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 73px;
+    max-width: 77px;
+    font-family: "Arial";
+    font-size: 12px;
+    line-height: 12px;
     background-color: #eaeaea;
   }
+
+  .example-result__item:nth-child(1) &::after {
+    content: "снижение веса";
+  }
+
+  .example-result__item:nth-child(2) &::after {
+    content: "затрачено времени";
+  }
+}
+
+.example-result__costs {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 
 @media (min-width: @tablet-width) {
+
   .example__title,
   .example__info,
   .example-result {
     background-color: #ffffff;
+  }
+
+  .example-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .example-result__costs {
+    align-self: center;
+    grid-column-start: 2;
+    grid-column-end: -1;
   }
 }
 
@@ -48,10 +95,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .example__info {
     grid-column-start: 1;
     grid-column-end: 2;
   }
+
   .example-result {
     grid-column-start: 1;
     grid-column-end: 2;
