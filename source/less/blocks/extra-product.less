@@ -23,13 +23,23 @@
     .extra-product {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 40px;
     }
+
+    .extra-product__data {
+      grid-column-start: 3;
+      grid-column-end: -1;
+    }
+
+    .extra-product__cell:first-child {
+      text-align: right;
+  }
 
     .extra-product__order {
       grid-column-start: 1;
       grid-column-end: -1;
       padding: 7px 220px;
-      width: 632px;
+      width: 100%;
     }
   }
 

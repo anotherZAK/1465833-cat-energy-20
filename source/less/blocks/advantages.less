@@ -58,6 +58,13 @@
     padding: 0;
   }
 
+  .advantages__item {
+    max-width: 250px;
+    padding-bottom: 150px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .advantages__item::before {
     width: 80px;
     height: 80px;
@@ -65,8 +72,8 @@
     left: 0;
   }
 
-  .advantages__item:nth-child(n+3)::before {
-    top: -10px;
+  .advantages__item:nth-child(n)::before {
+    top: -100px;
   }
 }
 

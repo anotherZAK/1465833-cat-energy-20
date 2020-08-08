@@ -21,12 +21,17 @@
   .catalog__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    row-gap: 140px;
+    column-gap: 60px;
   }
 
-  .catalog__item:not(:last-child) {
+  .catalog__item {
     background-color: @basic-grey;
-    border: none;
+    border-bottom: none;
+    &:last-child {
+      background-color: transparent;
+      border: 2px solid #f2f2f2;
+    }
   }
 }
 

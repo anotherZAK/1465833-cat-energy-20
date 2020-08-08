@@ -63,12 +63,26 @@
   .pattern__title {
     padding-top: 77px;
     padding-left: 53px;
+    font-size: 36px;
+    line-height: 36px;
     &::before,
     &::after {
       left: 500px;
     }
   }
   .pattern__info {
+    font-size: 14px;
+    line-height: 18px;
     border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pattern__info {
+    max-width: 445px;
+  }
+
+  .pattern__link {
+    margin-bottom: 59px;
   }
 }
