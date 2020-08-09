@@ -8,6 +8,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
   &--closed {
     &::before {
       content: "";
@@ -20,7 +21,9 @@
       transform: translateX(-10px);
     }
   }
+
   &--opened {
+
     &::before,
     &::after {
       content: "";
@@ -30,11 +33,12 @@
       height: 1.5px;
       background-color: #000000;
     }
+
     &::before {
       transform: rotate(45deg);
       box-shadow: none;
     }
-  
+
     &::after {
       transform: rotate(-45deg);
     }
