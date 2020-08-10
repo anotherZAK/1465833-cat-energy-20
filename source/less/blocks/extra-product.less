@@ -23,7 +23,6 @@
   .extra-product {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0 40px;
   }
 
   .extra-product__data {
@@ -44,6 +43,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .extra-product__data {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .extra-product__cell:first-child {
+    width: 200px;
+    text-align: left;
+  }
+
+  .extra-product__cell:last-child {
+    text-align: left;
+  }
+
   .extra-product__order {
     grid-column-start: 3;
     grid-column-end: -1;

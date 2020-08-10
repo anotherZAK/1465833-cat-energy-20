@@ -1,3 +1,7 @@
+.selection {
+  margin-bottom: 32px;
+}
+
 .selection__title {
   margin: 0;
   margin-bottom: 54px;
@@ -12,12 +16,6 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-}
-
-@media (min-width: @desktop-width) {
-  .selection__form-cat-data-grid {
-    display: flex;
-  }
 }
 
 .selection__form-submit {
@@ -41,8 +39,28 @@
   }
 
   .selection__questionary-text {
+    max-width: 330px;
     margin-bottom: 66px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .selection__form-send {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .selection__form-submit {
+    width: 70%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection__form-cat-data-grid {
+    display: flex;
+  }
+
+  .selection__form-submit {
+    width: 85%;
   }
 }

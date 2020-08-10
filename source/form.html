@@ -47,7 +47,7 @@
         <p class="selection__questionary-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="selection__form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="selection__form-cat-data-grid">
-            <fieldset class="filter-item">
+            <fieldset class="filter-item filter-item--cat-data">
               <ul class="form-list cat-data-list">
                 <li class="cat-data-list__item">
                   <label class="filter-text filter-text--cat-name">
@@ -69,7 +69,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-item">
+            <fieldset class="filter-item filter-item--programm">
               <ul class="form-list programm-list">
                 <li class="programm-list__item">
                   <label class="filter-radio">
@@ -92,7 +92,7 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="filter-item">
+          <fieldset class="filter-item filter-item--user-data-list">
             <legend class="filter-item__legend">Контактные данные (владельца кота)</legend>
             <ul class="form-list user-list">
               <li class="user-list__item">
@@ -111,7 +111,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-item">
+          <fieldset class="filter-item filter-item--textarea">
             <legend class="filter-item__legend">Комментарий</legend>
             <label class="filter-textarea">
               <textarea class="filter-textarea__area" name="cat-habit"
@@ -147,15 +147,17 @@
               </li>
             </ul>
           </fieldset>
-          <button class="btn selection__form-submit" type="submit">Отправить заявку</button>
-          <p class="selection__form-explanation">* — Обязательные поля</p>
+          <div class="selection__form-send">
+            <button class="btn selection__form-submit" type="submit">Отправить заявку</button>
+            <p class="selection__form-explanation">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </div>
   </main>
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="container container--footer-contacts">
       <section class="page-footer__contacts">
         <div class="contacts">
           <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
@@ -163,12 +165,12 @@
         </div>
       </section>
     </div>
-    <section class="page-footer__map">
-      <iframe
+    <section class="page-footer__map-navigation">
+      <iframe class="page-footer__map"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad548a777fe29b6fe3e02689a99d7d4d2146ceb5eaa612ce304c7f280ecb05635&amp;source=constructor"
         title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     </section>
-    <div class="container">
+    <div class="container container--footer-info">
       <section class="page-footer__info">
         <h2 class="visually-hidden">Полезные ссылки</h2>
         <div class="footer-info">
