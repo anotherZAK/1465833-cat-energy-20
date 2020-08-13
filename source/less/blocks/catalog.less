@@ -1,6 +1,8 @@
-
 .catalog__title {
+  margin: 0;
+  margin-bottom: 164px;
   font-size: 36px;
+  font-weight: normal;
   line-height: 36px;
 }
 
@@ -11,6 +13,7 @@
 }
 
 .catalog__item {
+  margin-bottom: 20px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ebebeb;
 }
@@ -19,11 +22,18 @@
   .catalog__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    row-gap: 140px;
+    column-gap: 60px;
   }
-  .catalog__item:not(:last-child) {
+
+  .catalog__item {
     background-color: @basic-grey;
-    border: none;
+    border-bottom: none;
+
+    &:last-child {
+      background-color: transparent;
+      border: 2px solid #f2f2f2;
+    }
   }
 }
 
@@ -32,8 +42,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 103px;
   }
+
   .catalog__item {
     background-color: @basic-grey;
   }

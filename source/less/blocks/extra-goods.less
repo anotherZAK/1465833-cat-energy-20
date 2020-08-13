@@ -1,54 +1,91 @@
+.extra-goods {
+  margin-bottom: 100px;
+}
+
+.extra-goods__list {
+  margin-bottom: 39px;
+  padding: 0;
+}
+
 .extra-goods__item {
+  margin-bottom: 12px;
+  padding-bottom: 19px;
   list-style: none;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .extra-goods__title {
   font-size: 24px;
+  font-weight: normal;
   line-height: 24px;
 }
 
-.extra-product__title {
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #222222;
-}
-
-.extra-product__data {
-  margin: 0 auto;
-  font-size: 14px;
-  color: #444444;
-}
-
 .extra-goods__profit {
-  min-height: 289px;
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  padding-top: 186px;
+  text-align: center;
   color: #ffffff;
-  background-color: @basic-green;
-  background-image: url(../../img/jpg/gift-photo-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -80px;
+    width: 280px;
+    height: 289px;
+    background-color: @basic-green;
+    background-image: url(../img/jpg/gift-photo-mobile@1x.jpg);
+    z-index: -1;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .extra-product {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .extra-goods__title {
+    padding-left: 40px;
+    font-size: 36px;
+    line-height: 36px;
   }
-  .extra-product__order {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    padding: 7px 220px;
-    width: 632px;
+
+  .extra-goods__list {
+    padding: 0 40px;
+  }
+
+  .extra-goods__profit {
+    margin-left: 60%;
+    padding-top: 50px;
+    text-align: left;
+
+    &::after {
+      left: -425px;
+      width: 708px;
+      height: 200px;
+      background-image: url(../img/jpg/gift-photo-tablet@1x.jpg);
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .extra-product__order {
-    grid-column-start: 3;
-    grid-column-end: -1;
-    padding: 7px 26px;
-    width: 240px;
+  .extra-goods__wrapper {
+    display: flex;
+  }
+
+  .extra-goods__list {
+    width: 80%;
+  }
+
+  .extra-goods__profit {
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+
+    &::after {
+      top: 0;
+      left: -60px;
+      width: 245px;
+      height: 289px;
+      background-image: url(../img/jpg/gift-photo-desktop@1x.jpg);
+    }
   }
 }

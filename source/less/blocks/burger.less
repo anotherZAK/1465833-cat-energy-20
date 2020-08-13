@@ -1,46 +1,58 @@
 .burger {
-    position: absolute;
-    top: -20px;
-    right: 0;
-    width: 70px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-}
+  position: absolute;
+  padding: 0;
+  top: -35px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
-.burger--closed {
+  &--closed {
     &::before {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 1.5px;
-    background-color: #000000;
-    box-shadow: 0 8px 0 0 #000000,
-                0 16px 0 0 #000000;
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      box-shadow: 0 -8px 0 0 #000000,
+        0 8px 0 0 #000000;
+      transform: translateX(-10px);
     }
   }
 
-  .burger--opened {
+  &--opened {
+
     &::before,
     &::after {
       content: "";
       position: absolute;
+      right: -3px;
       width: 36px;
       height: 1.5px;
       background-color: #000000;
     }
-    &::before {
-        transform: rotate(45deg);
-        box-shadow: none;
-      }
 
-      &::after {
-        transform: rotate(-45deg);
-      }
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
+}
 
 @media (max-width: @tablet-width - 1) {
-  .burger--closed + .main-nav__list {
-      display: none;
+  .burger--closed+.main-nav__list {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .burger {
+    display: none;
   }
 }

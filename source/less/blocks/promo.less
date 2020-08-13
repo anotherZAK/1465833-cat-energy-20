@@ -1,22 +1,23 @@
 .promo {
-  margin-bottom: 200px;
-  min-height: 320px;
-  background-image: url("../../img/jpg/index-background-mobile@1x.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 130px;
+  min-height: 305px;
 }
 
 .promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding-top: 27px;
   text-align: center;
   font-size: 36px;
+  font-weight: normal;
   line-height: 36px;
   color: #ffffff;
 }
 
 .promo__slogan {
   position: relative;
-  margin: 0 auto;
-  width: 198px;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
@@ -24,55 +25,57 @@
   color: #ffffff;
 }
 
-.promo__slogan::after {
+.promo__img {
   position: absolute;
-  content: "";
-  width: 280px;
-  height: 271px;
-  top: 90px;
+  margin: auto;
+  top: 160px;
+  right: 0;
   left: 0;
-  background-image: url("../../img/png/index-can-mobile@1x.png");
-}
-
-.promo__link {
-  padding-left: 61px;
-  padding-right: 51px;
+  max-width: 280px;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    margin: 0 auto;
+    margin-left: 87px;
     margin-bottom: 650px;
     min-height: auto;
     background-image: none;
   }
+
   .promo__title {
-    color: #000000;
-    text-align: left;
-  }
-  .promo__slogan {
-    margin: 0;
+    margin-bottom: 41px;
+    max-width: 470px;
+    font-size: 60px;
+    line-height: 60px;
     color: #000000;
     text-align: left;
   }
 
-  .promo__slogan::after {
-    background-image: url("../../img/jpg/index-can-tablet@1x.jpg");
-    width: 709px;
-    height: 609px;
-    top: 50px;
+  .promo__slogan {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+  }
+
+  .promo__img {
+    position: absolute;
+    top: 230px;
+    left: -65px;
+    max-width: 709px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
     position: absolute;
-    top: -600px;
+    top: -650px;
   }
-  .promo__slogan::after {
-    width: 552px;
-    height: 499px;
-    left: 500px;
-    background-image: url("../../img/png/index-can-desktop@1x.png");;
+  .promo__img {
+    position: absolute;
+    top: 30px;
+    left: 385px;
+    max-width: 709px;
   }
 }

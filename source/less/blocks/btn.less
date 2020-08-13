@@ -2,20 +2,23 @@
   display: block;
   margin: 0 auto;
   padding: 20px 109px;
-  width: 280px;
+  min-width: 280px;
   font-size: 16px;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: @basic-green;
+
+  &--all {
+    color: #444444;
+    background-color: @basic-grey;
+  }
+
   &:hover {
     background-color: #5EAA2F;
   }
+
   &:active {
     color: rgba(#ffffff, 0.3);
   }
-}
-
-.btn--all {
-  color: #444444;
-  background-color: @basic-grey;
 }

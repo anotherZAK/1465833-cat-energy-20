@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -11,10 +12,16 @@
   <header class="page-header">
     <div class="container container--no-borders">
       <section class="header">
-        <a class="page-header__logo" href=""><img src="https://via.placeholder.com/150x150"
-            alt="Логотип интернет-магазина"></a>
+        <h2 class="visually-hidden">Главное меню</h2>
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+            <img src="img/svg/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина">
+          </picture>
+        </a>
         <nav class="main-nav">
-          <button class="burger" type="button">
+          <button class="burger burger--closed" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
@@ -37,75 +44,78 @@
     <div class="container">
       <section class="selection">
         <h2 class="selection__title">Подбор программы</h2>
-        <p class="selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="selection__questionary-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="selection__form" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="form-grid">
-            <fieldset class="filter-item">
+          <div class="selection__form-cat-data-grid">
+            <fieldset class="filter-item filter-item--cat-data">
               <ul class="form-list cat-data-list">
                 <li class="cat-data-list__item">
                   <label class="filter-text filter-text--cat-name">
-                    <span class="filter-text__data">Имя:*</span>
-                    <input type="text" name="cat-name" placeholder="Барсик" required>
+                    <span class="filter-text__name">Имя:*</span>
+                    <input class="filter-text__data" type="text" name="cat-name" placeholder="Барсик" required>
                   </label>
                 </li>
                 <li class="cat-data-list__item">
                   <label class="filter-text filter-text--cat-weight">
-                    <span class="filter-text__data">Вес (кг):*</span>
-                    <input type="text" name="cat-weight" placeholder="7" required>
+                    <span class="filter-text__name">Вес (кг):*</span>
+                    <input class="filter-text__data" type="text" name="cat-weight" placeholder="7" required>
                   </label>
                 </li>
                 <li class="cat-data-list__item">
                   <label class="filter-text filter-text--cat-age">
-                    <span class="filter-text__data">Возраст (лет):*</span>
-                    <input type="text" name="cat-age" placeholder="7" required>
+                    <span class="filter-text__name">Возраст (лет):*</span>
+                    <input class="filter-text__data" type="text" name="cat-age" placeholder="7" required>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-item">
+            <fieldset class="filter-item filter-item--programm">
               <ul class="form-list programm-list">
                 <li class="programm-list__item">
                   <label class="filter-radio">
-                    <input type="radio" name="programm-type" value="slim" checked>
-                    <span class="filter-radio__data">Похудение</span>
+                    <input class="filter-radio__data" type="radio" name="programm-type" value="slim" checked>
+                    <span class="filter-radio__name">Похудение</span>
                   </label>
                 </li>
                 <li class="programm-list__item">
                   <label class="filter-radio">
-                    <input type="radio" name="programm-type" value="gain">
-                    <span class="filter-radio__data">Набор массы</span>
+                    <input class="filter-radio__data" type="radio" name="programm-type" value="gain">
+                    <span class="filter-radio__name">Набор массы</span>
                   </label>
                 </li>
                 <li class="programm-list__item">
                   <label class="filter-radio">
-                    <input type="radio" name="programm-type" value="dont-know">
-                    <span class="filter-radio__data">Не знаю (Нужен ваш совет)</span>
+                    <input class="filter-radio__data" type="radio" name="programm-type" value="dont-know">
+                    <span class="filter-radio__name">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
           </div>
-          <fieldset class="filter-item">
+          <fieldset class="filter-item filter-item--user-data-list">
             <legend class="filter-item__legend">Контактные данные (владельца кота)</legend>
             <ul class="form-list user-list">
               <li class="user-list__item">
                 <label class="filter-text">
-                  <span class="filter-text__data">Email:*</span>
-                  <input type="email" name="user-email" placeholder="kuklachev@gmail.com" required>
+                  <span class="filter-text__name">Email:*</span>
+                  <input class="filter-text__data filter-text__data--user-data" type="email" name="user-email"
+                    placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="user-list__item">
                 <label class="filter-text">
-                  <span class="filter-text__data">Телефон:*</span>
-                  <input type="tel" name="user-tel" placeholder="8 (960) 900-60-90" required>
+                  <span class="filter-text__name">Телефон:*</span>
+                  <input class="filter-text__data filter-text__data--user-data" type="tel" name="user-tel"
+                    placeholder="8 (960) 900-60-90" required>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-item">
+          <fieldset class="filter-item filter-item--textarea">
             <legend class="filter-item__legend">Комментарий</legend>
             <label class="filter-textarea">
-              <textarea name="cat-habit" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="filter-textarea__area" name="cat-habit"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
           <fieldset class="filter-item">
@@ -137,27 +147,34 @@
               </li>
             </ul>
           </fieldset>
-          <button class="btn btn--filter-submit" type="submit">Отправить заявку</button>
-          <p class="selection__explanation">* — Обязательные поля</p>
+          <div class="selection__form-send">
+            <button class="btn selection__form-submit" type="submit">Отправить заявку</button>
+            <p class="selection__form-explanation">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </div>
   </main>
 
   <footer class="page-footer">
-    <div class="container container--no-borders">
+    <div class="container container--footer-contacts">
       <section class="page-footer__contacts">
         <div class="contacts">
           <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          <iframe class="contacts__map"
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad548a777fe29b6fe3e02689a99d7d4d2146ceb5eaa612ce304c7f280ecb05635&amp;source=constructor"
-            title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         </div>
       </section>
+    </div>
+    <section class="page-footer__map-navigation">
+      <iframe class="page-footer__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad548a777fe29b6fe3e02689a99d7d4d2146ceb5eaa612ce304c7f280ecb05635&amp;source=constructor"
+        title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    </section>
+    <div class="container container--footer-info">
       <section class="page-footer__info">
+        <h2 class="visually-hidden">Полезные ссылки</h2>
         <div class="footer-info">
-          <a class="footer-info__logo"><img src="https://via.placeholder.com/150x150"
+          <a class="footer-info__logo" href="index.html"><img src="img/svg/logo-footer.svg" width="128" height="23"
               alt="Логотип интернет-магазина"></a>
           <div class="footer-info__social social">
             <ul class="social__list">
@@ -172,13 +189,20 @@
               </li>
             </ul>
           </div>
-          <p class="footer-info__developer">HTML Academy</p>
-          <a class="footer-info__logo" href=""><img src="https://via.placeholder.com/150x150"
-              alt="Логотип интернет-магазина"></a>
+          <div class="footer-info__developer developer">
+            <p class="developer__info">HTML Academy</p>
+            <a class="developer__logo" href="">
+              <svg class="developer__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <path
+                  d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
     </div>
   </footer>
+  <script src="js/navigation.js"></script>
 </body>
 
 </html>
