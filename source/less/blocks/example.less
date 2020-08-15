@@ -1,7 +1,11 @@
+.example {
+  padding-top: 27px;
+  padding-bottom: 30px;
+}
+
 .example__title {
   margin: 0;
   margin-bottom: 33px;
-  padding-top: 27px;
   font-size: 36px;
   font-weight: normal;
   line-height: 40px;
@@ -18,6 +22,8 @@
 
 .example-result__list {
   display: flex;
+  justify-content: center;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -65,12 +71,29 @@
 }
 
 .example-result__costs {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
 }
 
+.example__slide {
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  max-width: 280px;
+
+  &--current {
+    display: block;
+  }
+}
+
+.example__slider-controls {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (min-width: @tablet-width) {
   .example__title {
@@ -86,30 +109,23 @@
   .example-result {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 280px;
+    margin-bottom: 70px;
   }
 
   .example-result__info {
     padding-right: 24px;
     padding-bottom: 30px;
     padding-left: 24px;
+    width: 162px;
     font-size: 30px;
     line-height: 37px;
 
     &::after {
-      top: 83px;
-      max-width: 77px;
+      top: 105px;
+      max-width: 140px;
       font-size: 14px;
       line-height: 14px;
-      background-color: #eaeaea;
-    }
-
-    .example-result__item:nth-child(1) &::after {
-      content: "снижение веса";
-    }
-
-    .example-result__item:nth-child(2) &::after {
-      content: "затрачено времени";
+      background-color: #ffffff;
     }
   }
 
@@ -117,6 +133,15 @@
     align-self: center;
     grid-column-start: 2;
     grid-column-end: -1;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    width: 174px;
+  }
+
+  .example__slide {
+    max-width: 690px;
   }
 }
 
@@ -124,19 +149,46 @@
   .example {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .example__title {
-    margin-bottom: 146px;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 
   .example__info {
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .example-result {
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: -1;
+    margin-bottom: 0;
+  }
+
+  .example-result__info {
+    &::after {
+      background-color: #eaeaea;
+    }
+  }
+
+  .example-result__costs {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 400px;
+    text-align: center;
+  }
+
+  .example__slider {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
   }
 }
