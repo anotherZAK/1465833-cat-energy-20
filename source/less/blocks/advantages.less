@@ -15,7 +15,7 @@
 .advantages__item {
   position: relative;
   margin-bottom: 50px;
-  font-family: Arial;
+  font-family: @add-font;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
@@ -74,6 +74,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0;
+    counter-reset: number;
   }
 
   .advantages__item {
@@ -84,31 +85,32 @@
 
     &::after {
       position: absolute;
+      counter-increment: number;
       top: -130px;
       left: 110px;
       width: 134px;
       height: 280px;
-      font-family: "Oswald", sans-serif;
+      font-family: @main-font;
       font-size: 280px;
       line-height: 280px;
       color: #f2f2f2;
       z-index: -1;
     }
-  
+
     &:nth-child(1)::after {
-      content: "1";
+      content: counter(number);
     }
-  
+
     &:nth-child(2)::after {
-      content: "2";
+      content: counter(number);
     }
-  
+
     &:nth-child(3)::after {
-      content: "3";
+      content: counter(number);
     }
-  
+
     &:nth-child(4)::after {
-      content: "4";
+      content: counter(number);
     }
   }
 
