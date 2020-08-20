@@ -5,6 +5,37 @@
   color: #222222;
 }
 
+.filter-radio__name {
+  position: relative;
+
+  &::before,
+  &::after {
+    left: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%;
+  }
+
+  .filter-radio__data:checked + &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: @basic-green;
+    border-radius: 50%;
+  }
+
+  .filter-radio__data:disabled + & {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .filter-radio {
     font-size: 20px;

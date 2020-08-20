@@ -5,7 +5,47 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const rename = require("gulp-rename");
+const svgstore = require("gulp-svgstore");
+const svgclear = require("gulp-cheerio");
+const replace = require("gulp-replace");
+
 // Styles
+
+const images = () => {
+  return gulp.src("source/img/**/*.svg").pipe(imagemin([imagemin.svgo()]))
+}
+
+exports.images = images;
+
+const webps = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({
+      quality: 90
+    }))
+    .pipe(gulp.dest("source/img"))
+}
+
+exports.webps = webps;
+
+const sprite = () => {
+  return gulp.src("source/img/svg/sprite/*.svg")
+    .pipe(svgclear({
+      run: function ($) {
+        $("[fill]").removeAttr("fill");
+        $("[stroke]").removeAttr("stroke");
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(replace("&gt;", ">"))
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img/sprite"))
+}
+
+exports.sprite = sprite;
 
 const styles = () => {
   return gulp.src("source/less/style.less")
@@ -27,7 +67,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: "source"
     },
     cors: true,
     notify: false,

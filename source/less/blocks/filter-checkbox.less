@@ -1,7 +1,30 @@
 .filter-checkbox {
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  &__tick {
+    display: none;
+    position: absolute;
+    fill: @basic-green;
+  }
+
+  &__data:checked + &__tick {
+    display: block;
+  }
+}
+
+.filter-checkbox__name {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+  }
 }
 
 @media (min-width: @tablet-width) {
