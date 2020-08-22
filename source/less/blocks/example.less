@@ -14,7 +14,7 @@
 .example__info {
   margin: 0;
   margin-bottom: 25px;
-  font-family: "Arial", sans-serif;
+  font-family: @add-font;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
@@ -55,7 +55,7 @@
     left: 0;
     top: 73px;
     max-width: 77px;
-    font-family: "Arial", sans-serif;
+    font-family: @add-font;
     font-size: 12px;
     line-height: 12px;
     background-color: #eaeaea;
@@ -72,6 +72,7 @@
 
 .example-result__costs {
   margin: 0;
+  margin-bottom: 22px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -152,23 +153,7 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .example__title {
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .example__info {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
   .example-result {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: -1;
     margin-bottom: 0;
   }
 

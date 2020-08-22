@@ -1,5 +1,6 @@
 .filter-text {
   display: flex;
+  position: relative;
   align-items: baseline;
   font-size: 16px;
   line-height: 18px;
@@ -23,6 +24,20 @@
   &--user-data {
     border-color: #cdcdcd;
   }
+
+  &--user-data:focus + .filter-text__img {
+    fill: @basic-green;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+}
+
+.filter-text__img {
+  position: absolute;
+  top: 14px;
+  right: 14px;
 }
 
 @media (min-width: @tablet-width) {

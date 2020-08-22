@@ -9,7 +9,7 @@
   position: relative;
   margin: 0;
   margin-bottom: 29px;
-  padding-left: 72px;
+  padding-left: 76px;
   font-size: 24px;
   font-weight: normal;
   line-height: 37px;
@@ -29,14 +29,14 @@
   &::before {
     position: absolute;
     content: "";
-    top: 0px;
-    left: 20px;
+    top: -5px;
+    left: 15px;
     z-index: 3;
   }
 
   .proposal__item:nth-child(2) &::before {
     top: 10px;
-    left: 0px;
+    left: 2px;
   }
 }
 
@@ -44,7 +44,7 @@
   margin-top: 0;
   margin-bottom: 38px;
   padding-bottom: 23px;
-  font-family: Arial;
+  font-family: @add-font;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
@@ -71,23 +71,33 @@
 }
 
 @media (min-width: @tablet-width) {
-  .pattern__title {
+  .pattern {
     padding-top: 77px;
-    padding-left: 53px;
+    padding-right: 33px;
+    padding-bottom: 53px;
+    padding-left: 55px;
+  }
+
+  .pattern__title {
+    padding-left: 0px;
     font-size: 36px;
     line-height: 36px;
 
     &::before,
     &::after {
-      left: 500px;
+      width: 200px;
+      height: 200px;
+      left: 400px;
     }
 
     .proposal__item:nth-child(2) &::before {
-      left: 500px;
+      top: 50px;
+      left: 370px;
     }
   }
 
   .pattern__info {
+    width: 370px;
     font-size: 16px;
     line-height: 24px;
     border: none;
@@ -96,6 +106,7 @@
   .pattern__link {
     font-size: 20px;
     line-height: 30px;
+
     &::after {
       top: 10px;
       left: 120px;
@@ -107,11 +118,27 @@
 }
 
 @media (min-width: @desktop-width) {
-  .pattern__info {
-    max-width: 445px;
+  .pattern__title {
+    padding-bottom: 73px;
+    padding-left: 160px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before,
+    &::after {
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      left: 0px;
+    }
+
+    .proposal__item:nth-child(2) &::before {
+      top: 0;
+      left: -15px;
+    }
   }
 
-  .pattern__link {
-    margin-bottom: 59px;
+  .pattern__info {
+    max-width: 445px;
   }
 }
