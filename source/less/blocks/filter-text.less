@@ -9,13 +9,13 @@
 }
 
 .filter-text__name {
-  margin-right: 14px;
+  margin-right: 11px;
 }
 
 .filter-text__data {
   padding-top: 13px;
   padding-bottom: 12px;
-  padding-left: 7px;
+  padding-left: 15px;
   flex-grow: 1;
   font-family: inherit;
   text-transform: inherit;
@@ -25,7 +25,7 @@
     border-color: #cdcdcd;
   }
 
-  &--user-data:focus + .filter-text__img {
+  &--user-data:focus+.filter-text__img {
     fill: @basic-green;
   }
 
@@ -36,7 +36,7 @@
 
 .filter-text__img {
   position: absolute;
-  top: 14px;
+  top: 15px;
   right: 14px;
 }
 
@@ -44,5 +44,52 @@
   .filter-text {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .filter-text__name {
+    margin-right: 16px;
+  }
+
+  .filter-text__data {
+    margin-right: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    flex-grow: 1;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .filter-text__img {
+    top: 22px;
+    right: 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-text__data {
+    margin-right: 0px;
+
+    &--user-data {
+      min-width: 510px;
+    }
+
+    &--user-phone {
+      min-width: 460px;
+    }
+  }
+
+  .filter-text__name {
+    margin-right: 24px;
+  }
+
+  .filter-text__img {
+    top: 22px;
+    right: 9px;
+
+    &--phone {
+      top: 20px;
+      right: 27px;
+    }
   }
 }

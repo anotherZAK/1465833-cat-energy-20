@@ -6,9 +6,23 @@
 
 .developer__info {
   margin: 0;
-  margin-right: 140px;
+  font-family: @add-font;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.developer__logo {
+  margin-left: auto;
 }
 
 .developer__img {
+  width: 40px;
+  height: 40px;
   fill: #666666;
+}
+
+@media (min-width: @tablet-width) {
+  .developer__info {
+    margin-right: 9px;
+  }
 }

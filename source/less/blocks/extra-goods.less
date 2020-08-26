@@ -1,5 +1,5 @@
 .extra-goods {
-  margin-bottom: 100px;
+  margin-bottom: 76px;
 }
 
 .extra-goods__list {
@@ -15,6 +15,8 @@
 }
 
 .extra-goods__title {
+  margin: 0;
+  margin-bottom: 48px;
   font-size: 24px;
   font-weight: normal;
   line-height: 24px;
@@ -23,16 +25,29 @@
 .extra-goods__profit {
   position: relative;
   margin: 0 auto;
-  width: 120px;
+  width: 165px;
   padding-top: 186px;
+  font-family: @add-font;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: #ffffff;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 64px;
+    left: 54px;
+    width: 56px;
+    height: 60px;
+    background-image: url("../img/svg/icon-gift.svg");
+  }
 
   &::after {
     position: absolute;
     content: "";
     top: 0;
-    left: -80px;
+    left: -59px;
     width: 280px;
     height: 289px;
     background-color: @basic-green;
@@ -42,22 +57,38 @@
 }
 
 @media (min-width: @tablet-width) {
+  .extra-goods {
+    margin-bottom: 145px;
+  }
+
   .extra-goods__title {
-    padding-left: 40px;
+    margin-bottom: 81px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 36px;
   }
 
   .extra-goods__list {
-    padding: 0 40px;
+    margin-bottom: 69px;
+    padding: 0;
+  }
+
+  .extra-goods__item {
+    margin: 0;
+    padding: 25px 38px;
+    border: 1px solid #CDCDCD;
   }
 
   .extra-goods__profit {
     margin-left: 60%;
-    padding-top: 50px;
+    padding-top: 72px;
     font-size: 16px;
     line-height: 20px;
     text-align: left;
+
+    &::before {
+      left: -335px;
+    }
 
     &::after {
       left: -425px;
@@ -69,22 +100,47 @@
 }
 
 @media (min-width: @desktop-width) {
+  .extra-goods {
+    margin-bottom: 90px;
+  }
+
+  .extra-goods__title {
+    margin-bottom: 66px;
+    padding: 0;
+  }
+
   .extra-goods__wrapper {
     display: flex;
   }
 
   .extra-goods__list {
-    width: 80%;
+    margin-bottom: 0;
+    width: 73.4%;
+  }
+
+  .extra-goods__item {
+    padding-top: 15px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    padding-left: 0;
+    border-right: none;
+    border-left: none;
   }
 
   .extra-goods__profit {
-    margin: 0 auto;
-    padding-top: 50px;
+    margin: 0;
+    margin-left: 119px;
+    padding-top: 201px;
     text-align: center;
 
+    &::before {
+      left: 57px;
+      top: 78px;
+    }
+
     &::after {
-      top: 0;
-      left: -60px;
+      top: 14px;
+      left: -39px;
       width: 245px;
       height: 289px;
       background-image: url(../img/jpg/gift-photo-desktop@1x.jpg);

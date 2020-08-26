@@ -17,7 +17,8 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
-            <img src="img/svg/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина">
+            <img class="page-header__img" src="img/svg/logo-mobile.svg" width="191" height="38"
+              alt="Логотип интернет-магазина">
           </picture>
         </a>
         <nav class="main-nav">
@@ -28,8 +29,8 @@
             <li class="main-nav__item">
               <a href="index.html" class="main-nav__link">Главная</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a href="form.html" class="main-nav__link">Подбор программы</a>
@@ -47,7 +48,7 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="product">
-              <a class="product__link-title-title" href="">
+              <a class="product__link-title" href="">
                 <h3 class="product__title">Cat Energy Pro 500 г</h3>
               </a>
               <a class="product__link-img" href="">
@@ -68,7 +69,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">500 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -106,7 +107,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">1000 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -144,7 +145,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">500 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -182,7 +183,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">1000 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -220,7 +221,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">500 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -258,7 +259,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">1000 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -296,7 +297,7 @@
               </a>
               <table class="product__data">
                 <tr class="product__data-row">
-                  <td class="product__data-cell">Объём</td>
+                  <td class="product__data-cell">Масса</td>
                   <td class="product__data-cell">500 г</td>
                 </tr>
                 <tr class="product__data-row">
@@ -315,7 +316,7 @@
             <div class="product">
               <p class="product__more">Показать ещё 100500 товаров</p>
               <p class="product__info">На самом деле вкусов гораздо больше!</p>
-              <a class="product__order btn btn--all" href="">Заказать</a>
+              <a class="product__order product__order--all btn btn--all" href="">Показать все</a>
             </div>
           </li>
         </ul>
@@ -373,7 +374,7 @@
               </div>
             </li>
           </ul>
-          <p class="extra-goods__profit">Закажите всё и получите чехол для кота в подарок!</p>
+          <p class="extra-goods__profit">Закажите всё<br> и получите чехол для<br> кота в подарок!</p>
         </div>
       </section>
     </div>
@@ -384,8 +385,9 @@
       <div class="container">
         <section class="page-footer__contacts">
           <div class="contacts">
-            <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span
+                class="contacts__address-city">Санкт-Петербург</span></p>
           </div>
         </section>
       </div>
@@ -404,19 +406,22 @@
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vkontakte" href=""><span
-                      class="visually-hidden">Вконтакте</span><svg class="social__img" width="23" height="16">
+                      class="visually-hidden">Вконтакте</span><svg class="social__img social__img--vkontakte" width="23"
+                      height="16">
                       <use xlink:href="img/sprite/sprite.svg#icon-vkontakte"></use>
                     </svg></a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--instagram" href=""><span
-                      class="visually-hidden">Инстаграм</span><svg class="social__img" width="16" height="16">
+                      class="visually-hidden">Инстаграм</span><svg class="social__img social__img--instagram" width="16"
+                      height="16">
                       <use xlink:href="img/sprite/sprite.svg#icon-instagram"></use>
                     </svg></a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--facebook" href=""><span
-                      class="visually-hidden">Фэйсбук</span><svg class="social__img" width="22" height="22">
+                      class="visually-hidden">Фэйсбук</span><svg class="social__img social__img--facebook" width="22"
+                      height="22">
                       <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
                     </svg></a>
                 </li>

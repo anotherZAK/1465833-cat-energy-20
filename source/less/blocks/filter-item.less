@@ -1,28 +1,78 @@
 .filter-item {
+  margin: 0;
   padding: 0;
   border: none;
 
   &--cat-data {
-    margin-bottom: 47px;
+    margin-bottom: 37px;
   }
 
   &--programm {
-    margin-bottom: 47px;
+    margin-bottom: 29px;
   }
 
   &--user-data-list {
-    margin-bottom: 27px;
+    margin-bottom: 9px;
   }
 
   &--textarea {
     margin-bottom: 27px;
   }
+
+  &--more {
+    margin-bottom: 16px;
+  }
 }
 
 .filter-item__legend {
-  margin-bottom: 32px;
+  margin-bottom: 31px;
   font-size: 24px;
   line-height: 26px;
+
+  &--more {
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .filter-item {
+    &--cat-data {
+      margin-bottom: 57px;
+    }
+
+    &--programm {
+      margin-right: 37px;
+      margin-bottom: 76px;
+      margin-left: 42px;
+
+    }
+
+    &--user-data-list {
+      margin-bottom: 51px;
+      margin-left: 39px;
+    }
+
+    &--textarea {
+      margin-right: 37px;
+      margin-bottom: 64px;
+      margin-left: 37px;
+    }
+
+    &--more {
+      margin-bottom: 17px;
+      margin-left: 37px;
+    }
+  }
+
+  .filter-item__legend {
+    margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--more {
+      margin-bottom: 62px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -30,5 +80,44 @@
   .filter-item--programm,
   .filter-item--cat-data {
     flex-grow: 1;
+  }
+
+  .filter-item {
+    &--cat-data {
+      margin-bottom: 0px;
+    }
+
+    &--programm {
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 66px;
+
+    }
+
+    &--user-data-list {
+      margin-bottom: 51px;
+      margin-left: 0px;
+    }
+
+    &--textarea {
+      margin-right: 0px;
+      margin-bottom: 64px;
+      margin-left: 0px;
+    }
+
+    &--more {
+      margin-bottom: 25px;
+      margin-left: 0px;
+    }
+  }
+
+  .filter-item__legend {
+    margin-bottom: 74px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--more {
+      margin-bottom: 62px;
+    }
   }
 }
