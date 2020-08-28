@@ -25,7 +25,7 @@
     border-color: #cdcdcd;
   }
 
-  &--user-data:focus+.filter-text__img {
+  &--user-data:focus + .filter-text__img {
     fill: @basic-green;
   }
 
@@ -68,7 +68,7 @@
 
 @media (min-width: @desktop-width) {
   .filter-text__data {
-    margin-right: 0px;
+    margin-right: 0;
 
     &--user-data {
       min-width: 510px;
@@ -85,11 +85,11 @@
 
   .filter-text__img {
     top: 22px;
-    right: 9px;
+    right: 22px;
 
     &--phone {
       top: 20px;
-      right: 27px;
+      right: 22px;
     }
   }
 }

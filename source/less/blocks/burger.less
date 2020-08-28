@@ -8,47 +8,6 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  &--closed {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 1.5px;
-      background-color: #000000;
-      box-shadow: 0 -8px 0 0 #000000,
-        0 8px 0 0 #000000;
-      transform: translateX(-10px);
-    }
-  }
-
-  &--opened {
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 25px;
-      height: 1.5px;
-      background-color: #000000;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
-}
-
-@media (max-width: @tablet-width - 1) {
-  .burger--closed+.main-nav__list {
-    display: none;
-  }
 }
 
 @media (min-width: @tablet-width) {

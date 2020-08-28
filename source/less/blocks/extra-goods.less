@@ -15,11 +15,25 @@
 }
 
 .extra-goods__title {
+  position: relative;
   margin: 0;
   margin-bottom: 48px;
+  width: 250px;
   font-size: 24px;
   font-weight: normal;
   line-height: 24px;
+  background-color: #ffffff;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    top: 50%;
+    background-color: @basic-green;
+    z-index: -1;
+  }
 }
 
 .extra-goods__profit {
@@ -51,7 +65,7 @@
     width: 280px;
     height: 289px;
     background-color: @basic-green;
-    background-image: url(../img/jpg/gift-photo-mobile@1x.jpg);
+    background-image: url("../img/jpg/gift-photo-mobile@1x.jpg");
     z-index: -1;
   }
 }
@@ -64,8 +78,19 @@
   .extra-goods__title {
     margin-bottom: 81px;
     padding-left: 37px;
+    width: 411px;
     font-size: 36px;
     line-height: 36px;
+
+
+    &::before,
+    &::after {
+      top: 61%;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 
   .extra-goods__list {
@@ -76,7 +101,7 @@
   .extra-goods__item {
     margin: 0;
     padding: 25px 38px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
   }
 
   .extra-goods__profit {
@@ -94,7 +119,7 @@
       left: -425px;
       width: 708px;
       height: 200px;
-      background-image: url(../img/jpg/gift-photo-tablet@1x.jpg);
+      background-image: url("../img/jpg/gift-photo-tablet@1x.jpg");
     }
   }
 }
@@ -107,6 +132,16 @@
   .extra-goods__title {
     margin-bottom: 66px;
     padding: 0;
+    width: 373px;
+
+    &::before,
+    &::after {
+      top: 69%;
+    }
+
+    &::after {
+      margin-right: 420px;
+    }
   }
 
   .extra-goods__wrapper {
@@ -143,7 +178,7 @@
       left: -39px;
       width: 245px;
       height: 289px;
-      background-image: url(../img/jpg/gift-photo-desktop@1x.jpg);
+      background-image: url("../img/jpg/gift-photo-desktop@1x.jpg");
     }
   }
 }

@@ -4,11 +4,33 @@
   border: none;
 
   &--cat-data {
+    position: relative;
     margin-bottom: 37px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 1px;
+      bottom: -11px;
+      left: -20px;
+      background-color: #ebebeb;
+    }
   }
 
   &--programm {
+    position: relative;
     margin-bottom: 29px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 1px;
+      bottom: -4px;
+      left: -20px;
+      background-color: #ebebeb;
+    }
   }
 
   &--user-data-list {
@@ -25,12 +47,39 @@
 }
 
 .filter-item__legend {
+  position: relative;
   margin-bottom: 31px;
   font-size: 24px;
   line-height: 26px;
+  background-color: #ffffff;
+
+  &--comment {
+    width: 142px;
+  }
 
   &--more {
     margin-bottom: 41px;
+    width: 164px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    top: 66%;
+    background-color: @basic-green;
+    z-index: -1;
+  }
+
+  &--user {
+    width: 200px;
+  }
+
+  &--user::before,
+  &--user::after {
+    top: 32%;
   }
 }
 
@@ -38,6 +87,10 @@
   .filter-item {
     &--cat-data {
       margin-bottom: 57px;
+
+      &::after {
+        content: none;
+      }
     }
 
     &--programm {
@@ -45,6 +98,9 @@
       margin-bottom: 76px;
       margin-left: 42px;
 
+      &::after {
+        content: none;
+      }
     }
 
     &--user-data-list {
@@ -69,14 +125,49 @@
     font-size: 36px;
     line-height: 36px;
 
+    &--comment {
+      width: 222px;
+    }
+
+    &--comment::after {
+      margin-right: 259px;
+    }
+
     &--more {
       margin-bottom: 62px;
+      width: 255px;
+    }
+
+    &--more::after {
+      margin-right: 292px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 2px;
+      top: 55%;
+      background-color: @basic-green;
+      z-index: -1;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &--user {
+      width: 554px;
+    }
+
+    &--user::after {
+      margin-right: 593px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-
   .filter-item--programm,
   .filter-item--cat-data {
     flex-grow: 1;
@@ -84,30 +175,29 @@
 
   .filter-item {
     &--cat-data {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &--programm {
-      margin-right: 0px;
-      margin-bottom: 0px;
+      margin-right: 0;
+      margin-bottom: 0;
       margin-left: 66px;
-
     }
 
     &--user-data-list {
       margin-bottom: 51px;
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     &--textarea {
-      margin-right: 0px;
+      margin-right: 0;
       margin-bottom: 64px;
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     &--more {
       margin-bottom: 25px;
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
 

@@ -17,7 +17,7 @@
 }
 
 .proposal__item {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   background-color: @basic-grey;
   z-index: 1;
 
@@ -26,7 +26,7 @@
   }
 }
 
-@media (min-width:@tablet-width) {
+@media (min-width: @tablet-width) {
   .proposal {
     position: relative;
     margin-bottom: 45px;
@@ -56,13 +56,15 @@
   }
 }
 
-@media (min-width:@desktop-width) {
+@media (min-width: @desktop-width) {
   .proposal {
     margin-top: 81px;
     margin-bottom: 73px;
   }
 
   .proposal__list {
+    display: flex;
+    flex-wrap: wrap;
     width: auto;
   }
 
@@ -70,11 +72,6 @@
     position: absolute;
     margin-left: -8px;
     top: -322px;
-  }
-
-  .proposal__list {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .proposal__item {

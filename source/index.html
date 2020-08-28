@@ -21,8 +21,8 @@
               alt="Логотип интернет-магазина">
           </picture>
         </a>
-        <nav class="main-nav">
-          <button class="burger burger--closed" type="button">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
@@ -168,6 +168,7 @@
         </section>
       </div>
       <section class="page-footer__map-navigation">
+        <h2 class="visually-hidden">Наше местоположение</h2>
         <iframe class="page-footer__map"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad548a777fe29b6fe3e02689a99d7d4d2146ceb5eaa612ce304c7f280ecb05635&amp;source=constructor"
           title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
@@ -176,8 +177,8 @@
         <section class="page-footer__info">
           <h2 class="visually-hidden">Полезные ссылки</h2>
           <div class="footer-info">
-            <a class="footer-info__logo" href=""><img src="img/svg/logo-footer.svg" width="128" height="23"
-                alt="Логотип интернет-магазина"></a>
+            <a class="footer-info__logo" href=""><img class="footer-info__img" src="img/svg/logo-footer.svg" width="128"
+                height="23" alt="Логотип интернет-магазина"></a>
             <div class="footer-info__social social">
               <ul class="social__list">
                 <li class="social__item">
@@ -204,8 +205,8 @@
               </ul>
             </div>
             <div class="footer-info__developer developer">
-              <a class="developer__info" href="">HTML Academy</a>
-              <a class="developer__logo" href="">
+              <a class="developer__info" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="developer__logo" href="https://htmlacademy.ru/intensive/adaptive">
                 <svg class="developer__img" width="27" height="34">
                   <use xlink:href="img/sprite/sprite.svg#htmlacademy"></use>
                 </svg>

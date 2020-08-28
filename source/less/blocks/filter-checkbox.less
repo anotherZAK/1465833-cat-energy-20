@@ -13,8 +13,13 @@
   fill: @basic-green;
 }
 
-.filter-checkbox__data:checked+&__tick {
+.filter-checkbox__data:checked + .filter-checkbox__tick {
   display: block;
+}
+
+.filter-checkbox__data:disabled + .filter-checkbox__tick,
+.filter-checkbox__data:disabled ~ .filter-checkbox__name {
+  opacity: 0.3;
 }
 
 .filter-checkbox__name {
@@ -28,7 +33,7 @@
     left: 0;
     width: 30px;
     height: 30px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
   }
 }
 

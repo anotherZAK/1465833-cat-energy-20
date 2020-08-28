@@ -4,7 +4,7 @@
   width: 84px;
   height: 14px;
   background-color: #ffffff;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
   border-radius: 6px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .slider-controls__btn {
-  font-family: "Oswald";
+  font-family: @main-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -40,7 +40,7 @@
     margin-left: 15px;
     width: 428px;
     height: 6px;
-    background: #DCDCDC;
+    background: #dcdcdc;
     border: 0;
     border-radius: 6px;
   }
@@ -50,8 +50,13 @@
   }
 
   .slider-controls__btn {
+    margin-right: 8px;
+    margin-left: 8px;
+    padding-right: 0;
+    padding-left: 0;
     font-size: 20px;
     line-height: 30px;
+    border-bottom: 1px dotted #cdcdcd;
   }
 
   .slider-controls__toggle {
@@ -64,19 +69,18 @@
     border: 13px solid #ffffff;
     background-color: @basic-green;
     border-radius: 50%;
-    box-shadow: 0 0px 0 1px #CDCDCD;
-    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+    box-shadow: 0 0 0 1px #cdcdcd;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
     box-sizing: content-box;
     cursor: pointer;
 
     &:hover {
-      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.19));
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
     }
 
     &:active {
-      box-shadow: 0 0px 0 1px @basic-green;
-      filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.2));
+      box-shadow: 0 0 0 1px @basic-green;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
     }
   }
-
 }

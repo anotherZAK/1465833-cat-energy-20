@@ -19,12 +19,32 @@
 }
 
 .catalog__item {
-  margin-bottom: 0px;
-  padding-bottom: 43px;
-  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 44px;
 
   &:last-child .product {
     margin-top: 60px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 137vw;
+    height: 1px;
+    top: -23px;
+    left: -134px;
+    background-color: #ebebeb;
+    z-index: 1;
+  }
+
+  &:last-child::before {
+    top: -83px;
+  }
+
+  &:last-child::after {
+    top: 127px;
   }
 }
 
@@ -59,6 +79,11 @@
 
     &:last-child .product {
       margin-top: 161px;
+    }
+
+    &::before,
+    &::after {
+      content: none;
     }
   }
 }
