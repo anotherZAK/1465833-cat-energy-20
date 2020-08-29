@@ -17,11 +17,12 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
-            <img src="img/svg/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина">
+            <img class="page-header__img" src="img/svg/logo-mobile.svg" width="191" height="38"
+              alt="Логотип интернет-магазина">
           </picture>
         </a>
-        <nav class="main-nav">
-          <button class="burger burger--closed" type="button">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
@@ -31,8 +32,8 @@
             <li class="main-nav__item">
               <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link">Подбор программы</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -73,7 +74,8 @@
               <ul class="form-list programm-list">
                 <li class="programm-list__item">
                   <label class="filter-radio">
-                    <input class="filter-radio__data visually-hidden" type="radio" name="programm-type" value="slim" checked>
+                    <input class="filter-radio__data visually-hidden" type="radio" name="programm-type" value="slim"
+                      checked>
                     <span class="filter-radio__name">Похудение</span>
                   </label>
                 </li>
@@ -85,7 +87,8 @@
                 </li>
                 <li class="programm-list__item">
                   <label class="filter-radio">
-                    <input class="filter-radio__data visually-hidden" type="radio" name="programm-type" value="dont-know">
+                    <input class="filter-radio__data visually-hidden" type="radio" name="programm-type"
+                      value="dont-know">
                     <span class="filter-radio__name">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </li>
@@ -93,39 +96,39 @@
             </fieldset>
           </div>
           <fieldset class="filter-item filter-item--user-data-list">
-            <legend class="filter-item__legend">Контактные данные (владельца кота)</legend>
+            <legend class="filter-item__legend filter-item__legend--user">Контактные данные (владельца кота)</legend>
             <ul class="form-list user-list">
               <li class="user-list__item">
                 <label class="filter-text">
                   <span class="filter-text__name">Email:*</span>
                   <input class="filter-text__data filter-text__data--user-data" type="email" name="user-email"
                     placeholder="kuklachev@gmail.com" required>
-                    <svg class="filter-text__img filter-text__img--mail" width="20" height="14">
-                      <use xlink:href="img/sprite/sprite.svg#icon-mail"></use>
-                    </svg>
+                  <svg class="filter-text__img filter-text__img--mail" width="20" height="14">
+                    <use xlink:href="img/sprite/sprite.svg#icon-mail"></use>
+                  </svg>
                 </label>
               </li>
               <li class="user-list__item">
                 <label class="filter-text">
                   <span class="filter-text__name">Телефон:*</span>
-                  <input class="filter-text__data filter-text__data--user-data" type="tel" name="user-tel"
-                    placeholder="8 (960) 900-60-90" required>
-                    <svg class="filter-text__img filter-text__img--phone" width="20" height="20">
-                      <use xlink:href="img/sprite/sprite.svg#icon-phone"></use>
-                    </svg>
+                  <input class="filter-text__data filter-text__data--user-data filter-text__data--user-phone" type="tel"
+                    name="user-tel" placeholder="8 (960) 900-60-90" required>
+                  <svg class="filter-text__img filter-text__img--phone" width="20" height="20">
+                    <use xlink:href="img/sprite/sprite.svg#icon-phone"></use>
+                  </svg>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-item filter-item--textarea">
-            <legend class="filter-item__legend">Комментарий</legend>
+            <legend class="filter-item__legend filter-item__legend--comment">Комментарий</legend>
             <label class="filter-textarea">
               <textarea class="filter-textarea__area" name="cat-habit"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
-          <fieldset class="filter-item">
-            <legend class="filter-item__legend">Дополнительно</legend>
+          <fieldset class="filter-item filter-item--more">
+            <legend class="filter-item__legend filter-item__legend--more">Дополнительно</legend>
             <ul class="form-list extra-option-list">
               <li class="extra-option-list__item">
                 <label class="filter-checkbox">
@@ -160,13 +163,13 @@
                   <svg class="filter-checkbox__tick" width="18" height="14">
                     <use xlink:href="img/sprite/sprite.svg#icon-tick"></use>
                   </svg>
-                  <span class="filter-checkbox__name" s>Витамины</span>
+                  <span class="filter-checkbox__name">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <div class="selection__form-send">
-            <button class="btn selection__form-submit" type="submit">Отправить заявку</button>
+            <button class="selection__form-submit btn" type="submit">Отправить заявку</button>
             <p class="selection__form-explanation">* — Обязательные поля</p>
           </div>
         </form>
@@ -179,12 +182,14 @@
       <div class="container">
         <section class="page-footer__contacts">
           <div class="contacts">
-            <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span
+                class="contacts__address-city">Санкт-Петербург</span></p>
           </div>
         </section>
       </div>
       <section class="page-footer__map-navigation">
+        <h2 class="visually-hidden">Наше местоположение</h2>
         <iframe class="page-footer__map"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad548a777fe29b6fe3e02689a99d7d4d2146ceb5eaa612ce304c7f280ecb05635&amp;source=constructor"
           title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
@@ -193,34 +198,37 @@
         <section class="page-footer__info">
           <h2 class="visually-hidden">Полезные ссылки</h2>
           <div class="footer-info">
-            <a class="footer-info__logo" href=""><img src="img/svg/logo-footer.svg" width="128" height="23"
-                alt="Логотип интернет-магазина"></a>
+            <a class="footer-info__logo" href=""><img class="footer-info__img" src="img/svg/logo-footer.svg" width="128"
+                height="23" alt="Логотип интернет-магазина"></a>
             <div class="footer-info__social social">
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vkontakte" href=""><span
-                      class="visually-hidden">Вконтакте</span><svg class="social__img" width="23" height="16">
+                      class="visually-hidden">Вконтакте</span><svg class="social__img social__img--vkontakte" width="23"
+                      height="16">
                       <use xlink:href="img/sprite/sprite.svg#icon-vkontakte"></use>
                     </svg></a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--instagram" href=""><span
-                      class="visually-hidden">Инстаграм</span><svg class="social__img" width="16" height="16">
+                      class="visually-hidden">Инстаграм</span><svg class="social__img social__img--instagram" width="16"
+                      height="16">
                       <use xlink:href="img/sprite/sprite.svg#icon-instagram"></use>
                     </svg></a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--facebook" href=""><span
-                      class="visually-hidden">Фэйсбук</span><svg class="social__img" width="22" height="22">
+                      class="visually-hidden">Фэйсбук</span><svg class="social__img social__img--facebook" width="22"
+                      height="22">
                       <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
                     </svg></a>
                 </li>
               </ul>
             </div>
             <div class="footer-info__developer developer">
-              <a class="developer__info" href="">HTML Academy</a>
-              <a class="developer__logo" href="">
-                <svg class="developer__img" width="27" height="34">
+              <a class="developer__info" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="developer__logo" href="https://htmlacademy.ru/intensive/adaptive">
+                <svg class="developer__img" width="37" height="44">
                   <use xlink:href="img/sprite/sprite.svg#htmlacademy"></use>
                 </svg>
               </a>

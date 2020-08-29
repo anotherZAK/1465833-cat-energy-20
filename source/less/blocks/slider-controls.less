@@ -1,68 +1,86 @@
 .slider-controls__scale {
-    width: 84px;
-    height: 14px;
-    background-color: #ffffff;
-    border: 1px solid #CDCDCD;
-    border-radius: 6px;
+  margin-right: 9px;
+  margin-left: 9px;
+  width: 84px;
+  height: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
 }
 
 .slider-controls__bar {
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-left: 6px;
-    width: 35px;
-    height: 6px;
-    background-color: @basic-green;
-    border-radius: 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 6px;
+  width: 35px;
+  height: 6px;
+  background-color: @basic-green;
+  border-radius: 6px;
 
-    &--after {
-        margin-left: auto;
-        margin-right: 6px;
-    }
+  &--after {
+    margin-left: auto;
+    margin-right: 6px;
+  }
 }
 
 .slider-controls__btn {
-    font-family: "Oswald";
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
-    .slider-controls__scale {
-        position: relative;
-        width: 428px;
-        height: 6px;
-        background: #DCDCDC;
-        border: 0;
-        border-radius: 6px;
+  .slider-controls__scale {
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 428px;
+    height: 6px;
+    background: #dcdcdc;
+    border: 0;
+    border-radius: 6px;
+  }
+
+  .slider-controls__bar {
+    display: none;
+  }
+
+  .slider-controls__btn {
+    margin-right: 8px;
+    margin-left: 8px;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted #cdcdcd;
+  }
+
+  .slider-controls__toggle {
+    position: absolute;
+    top: -16px;
+    left: 198px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 13px solid #ffffff;
+    background-color: @basic-green;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #cdcdcd;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    box-sizing: content-box;
+    cursor: pointer;
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
     }
 
-    .slider-controls__bar {
-        display: none;
+    &:active {
+      box-shadow: 0 0 0 1px @basic-green;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
     }
-
-    .slider-controls__btn {
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .slider-controls__toggle {
-        position: absolute;
-        top: -16px;
-        left: 200px;
-        width: 8px;
-        height: 8px;
-        padding: 0;
-        border: 14px solid #ffffff;
-        background-color: @basic-green;
-        border-radius: 50%;
-        box-shadow: 0 2px 1px 0 #CDCDCD;
-        box-sizing: content-box;
-        cursor: pointer;
-      }
-
+  }
 }

@@ -1,11 +1,16 @@
 .extra-option-list__item {
-  margin-bottom: 19px;
+  margin-bottom: 24px;
 }
 
 @media (min-width: @tablet-width) {
   .extra-option-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+  }
+
+  .extra-option-list__item {
+    margin-bottom: 42px;
   }
 }
 
@@ -13,5 +18,6 @@
   .extra-option-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 73px;
   }
 }

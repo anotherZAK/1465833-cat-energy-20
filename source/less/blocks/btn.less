@@ -3,22 +3,30 @@
   margin: 0 auto;
   padding: 20px 109px;
   min-width: 280px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: @basic-green;
 
-  &--all {
-    color: #444444;
-    background-color: @basic-grey;
-  }
-
   &:hover {
-    background-color: #5EAA2F;
+    background-color: #5eea2f;
   }
 
   &:active {
     color: rgba(#ffffff, 0.3);
+  }
+
+  &--all {
+    color: #444444;
+    background-color: @basic-grey;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(#444444, 0.3);
+    }
   }
 }
