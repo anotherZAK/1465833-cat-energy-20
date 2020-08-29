@@ -21,6 +21,7 @@
 
 .example-result__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   margin-bottom: 9px;
@@ -86,7 +87,7 @@
   position: relative;
   top: 13px;
   left: -20px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 44px;
   max-width: 320px;
 
@@ -108,7 +109,7 @@
 
   .example-result {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     margin-bottom: 35px;
   }
 
@@ -159,10 +160,31 @@
     width: 174px;
   }
 
+  .example__slider {
+    height: 575px;
+    position: relative;
+  }
+
   .example__slide {
+    position: absolute;
+    display: block;
     margin-bottom: 28px;
     left: 15px;
     max-width: 690px;
+
+    &--before {
+      clip-path: polygon(0% 0%, 49% 0%, 49% 100%, 0% 100%);
+    }
+
+    &--after {
+      clip-path: polygon(49% 0%, 100% 0%, 100% 100%, 49% 100%);
+    }
+  }
+
+  .example__slider-controls {
+    position: absolute;
+    bottom: 0;
+    left: 61px;
   }
 }
 
@@ -225,12 +247,20 @@
   }
 
   .example__slider-controls {
-    margin-left: 206px;
+    left: 31px;
   }
 
   .example__slide {
     top: -8px;
-    left: 136px;
+    left: -40px;
     max-width: 690px;
+
+    &--before {
+      clip-path: polygon(0% 0%, 53% 0%, 53% 100%, 0% 100%);
+    }
+
+    &--after {
+      clip-path: polygon(53% 0%, 100% 0%, 100% 100%, 53% 100%);
+    }
   }
 }

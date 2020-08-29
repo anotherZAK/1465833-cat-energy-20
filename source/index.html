@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 
 <body class="page-body">
@@ -124,8 +126,10 @@
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/png/before-tablet@1x.webp 1x, img/png/before-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/png/before-mobile@1x.webp 1x, img/png/before-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/png/before-desktop@1x.png, img/png/before-desktop@2x.png">
-              <source media="(min-width: 768px)" srcset="img/png/before-tablet@1x.png, img/png/before-tablet@2x.png">
+              <source media="(min-width: 1440px)"
+                srcset="img/png/before-desktop@1x.png 1x, img/png/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/png/before-tablet@1x.png 1x, img/png/before-tablet@2x.png 2x">
               <img class="example__slide example__slide--before example__slide--current"
                 src="img/png/before-mobile@1x.png" srcset="img/png/before-mobile@2x.png"
                 alt="Картинка котика до похудения">
@@ -136,8 +140,10 @@
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/png/after-tablet@1x.webp 1x, img/png/after-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/png/after-mobile@1x.webp 1x, img/png/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/png/after-desktop@1x.png, img/png/after-desktop@2x.png">
-              <source media="(min-width: 768px)" srcset="img/png/after-tablet@1x.png, img/png/after-tablet@2x.png">
+              <source media="(min-width: 1440px)"
+                srcset="img/png/after-desktop@1x.png 1x, img/png/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/png/after-tablet@1x.png 1x, img/png/after-tablet@2x.png 2x">
               <img class="example__slide example__slide--after" src="img/png/after-mobile@1x.png"
                 srcset="img/png/after-mobile@2x.png" alt="Картинка котика после похудения">
             </picture>
@@ -217,8 +223,8 @@
       </div>
     </div>
   </footer>
-  <script src="js/navigation-menu.js"></script>
-  <script src="js/slider.js"></script>
+  <script src="js/navigation-menu-min.js"></script>
+  <script src="js/slider-min.js"></script>
 </body>
 
 </html>

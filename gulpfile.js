@@ -35,6 +35,12 @@ const copy = () => {
     .pipe(gulp.dest("build"));
 };
 
+const cleanSprite = () => {
+  return del("build/img/svg/forSprite");
+}
+
+exports.clean = cleanSprite;
+
 exports.copy = copy;
 
 const html = () => {
@@ -88,8 +94,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    // .pipe(csso())
-    // .pipe(rename({suffix: "__min"}))
+    .pipe(csso())
+    .pipe(rename({suffix: "-min"}))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -100,7 +106,7 @@ exports.styles = styles;
 const jsstyles = () => {
   return gulp.src("source/js/*.js")
     .pipe(jsmin())
-    // .pipe(rename({suffix: "__min"}))
+    .pipe(rename({suffix: "-min"}))
     .pipe(gulp.dest("build/js"));
 }
 
@@ -134,5 +140,5 @@ exports.start = gulp.series(
 );
 
 exports.build = gulp.series(
-  clean, copy, html, styles, jsstyles
+  clean, copy, cleanSprite, html, styles, jsstyles
 );
