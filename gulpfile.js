@@ -94,6 +94,21 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.styles = styles;
+
+const stylesMin = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename({suffix: "-min"}))
     .pipe(sourcemap.write("."))
@@ -101,7 +116,7 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+exports.stylesMin = stylesMin;
 
 const jsstyles = () => {
   return gulp.src("source/js/*.js")
@@ -140,5 +155,5 @@ exports.start = gulp.series(
 );
 
 exports.build = gulp.series(
-  clean, copy, cleanSprite, html, styles, jsstyles
+  clean, copy, cleanSprite, html, styles, stylesMin, jsstyles
 );

@@ -43,8 +43,22 @@
 
 @media (min-width: @desktop-width) {
   .background-wrapper {
+    position: relative;
+
     &--example {
-      background-image: linear-gradient(0deg, #eaeaea 72%, #ffffff 72% 100%);
+      background-image: linear-gradient(0deg, #f2f2f2 72%, #ffffff 72% 100%);
+      z-index: -2;
+    }
+
+    &--example::after {
+      position: absolute;
+      content: "";
+      width: 27.5%;
+      height: 72%;
+      bottom: 0;
+      right: 0;
+      background-color: #eaeaea;
+      z-index: -1;
     }
   }
 }
