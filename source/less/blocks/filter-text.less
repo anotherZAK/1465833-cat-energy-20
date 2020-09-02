@@ -25,11 +25,24 @@
     border-color: #cdcdcd;
   }
 
-  &--user-data:focus + .filter-text__img {
+  &--user-data:active + .filter-text__img {
     fill: @basic-green;
   }
 
+  &:invalid {
+    border-color: #ff8282;
+  }
+
+  &:invalid:focus {
+    border-color: #ff8282;
+  }
+
+  &:invalid:focus + .filter-text__img {
+    fill: #ff8282;
+  }
+
   &:focus {
+    border-width: 2px;
     border-color: #444444;
   }
 }
@@ -58,6 +71,7 @@
     flex-grow: 1;
     font-size: 20px;
     line-height: 30px;
+    height: 58px;
   }
 
   .filter-text__img {
@@ -71,11 +85,11 @@
     margin-right: 0;
 
     &--user-data {
-      min-width: 510px;
+      min-width: 491px;
     }
 
     &--user-phone {
-      min-width: 460px;
+      min-width: 477px;
     }
   }
 

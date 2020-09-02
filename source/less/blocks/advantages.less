@@ -85,10 +85,10 @@
     &::after {
       position: absolute;
       content: "";
-      width: 100vw;
+      width: 200vw;
       height: 1px;
       bottom: -103px;
-      left: -30px;
+      left: -50vw;
       background-color: #e6e6e6;
     }
   }
@@ -161,6 +161,10 @@
 @media (min-width: @desktop-width) {
   .advantages {
     margin-bottom: 82px;
+
+    &::after {
+      content: none;
+    }
   }
 
   .advantages__title {

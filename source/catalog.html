@@ -5,10 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 
-<body class="page-body">
+<body class="page-body overflow">
   <header class="page-header">
     <div class="container container--no-borders">
       <section class="header">
@@ -60,9 +62,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/chicken-small-mobile@1x.webp 1x, img/jpg/chicken-small-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/chicken-small-desktop@1x.png, img/png/chicken-small-desktop@2x.png">
+                    srcset="img/png/chicken-small-desktop@1x.png 1x, img/png/chicken-small-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/chicken-small-tablet@1x.png, img/png/chicken-small-tablet@2x.png">
+                    srcset="img/png/chicken-small-tablet@1x.png 1x, img/png/chicken-small-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/chicken-small-mobile@1x.jpg"
                     srcset="img/jpg/chicken-small-mobile@2x.jpg" alt="Порция со вкусом курицы, 500 г">
                 </picture>
@@ -98,9 +100,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/chicken-big-mobile@1x.webp 1x, img/jpg/chicken-big-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/chicken-big-desktop@1x.png, img/png/chicken-big-desktop@2x.png">
+                    srcset="img/png/chicken-big-desktop@1x.png 1x, img/png/chicken-big-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/chicken-big-tablet@1x.png, img/png/chicken-big-tablet@2x.png">
+                    srcset="img/png/chicken-big-tablet@1x.png 1x, img/png/chicken-big-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/chicken-big-mobile@1x.jpg"
                     srcset="img/jpg/chicken-big-mobile@2x.jpg" alt="Порция со вкусом курицы, 1000 г">
                 </picture>
@@ -136,9 +138,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/fish-small-mobile@1x.webp 1x, img/jpg/fish-small-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/fish-small-desktop@1x.png, img/png/fish-small-desktop@2x.png">
+                    srcset="img/png/fish-small-desktop@1x.png 1x, img/png/fish-small-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/fish-small-tablet@1x.png, img/png/fish-small-tablet@2x.png">
+                    srcset="img/png/fish-small-tablet@1x.png 1x, img/png/fish-small-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/fish-small-mobile@1x.jpg"
                     srcset="img/jpg/fish-small-mobile@2x.jpg" alt="Порция со вкусом рыбы, 700 г">
                 </picture>
@@ -174,9 +176,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/fish-big-mobile@1x.webp 1x, img/jpg/fish-big-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/fish-big-desktop@1x.png, img/png/fish-big-desktop@2x.png">
+                    srcset="img/png/fish-big-desktop@1x.png 1x, img/png/fish-big-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/fish-big-tablet@1x.png, img/png/fish-big-tablet@2x.png">
+                    srcset="img/png/fish-big-tablet@1x.png 1x, img/png/fish-big-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/fish-big-mobile@1x.jpg" srcset="img/jpg/fish-big-mobile@2x.jpg"
                     alt="Порция со вкусом рыбы, 1000 г">
                 </picture>
@@ -212,9 +214,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/buckwheat-small-mobile@1x.webp 1x, img/jpg/buckwheat-small-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/buckwheat-small-desktop@1x.png, img/png/buckwheat-small-desktop@2x.png">
+                    srcset="img/png/buckwheat-small-desktop@1x.png 1x, img/png/buckwheat-small-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/buckwheat-small-tablet@1x.png, img/png/buckwheat-small-tablet@2x.png">
+                    srcset="img/png/buckwheat-small-tablet@1x.png 1x, img/png/buckwheat-small-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/buckwheat-small-mobile@1x.jpg"
                     srcset="img/jpg/buckwheat-small-mobile@2x.jpg" alt="Порция со вкусом гречки, 500 г">
                 </picture>
@@ -250,9 +252,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/buckwheat-big-mobile@1x.webp 1x, img/jpg/buckwheat-big-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/buckwheat-big-desktop@1x.png, img/png/buckwheat-big-desktop@2x.png">
+                    srcset="img/png/buckwheat-big-desktop@1x.png 1x, img/png/buckwheat-big-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/buckwheat-big-tablet@1x.png, img/png/buckwheat-big-tablet@2x.png">
+                    srcset="img/png/buckwheat-big-tablet@1x.png 1x, img/png/buckwheat-big-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/buckwheat-big-mobile@1x.jpg"
                     srcset="img/jpg/buckwheat-big-mobile@2x.jpg" alt="Порция со вкусом гречки, 1000 г">
                 </picture>
@@ -288,9 +290,9 @@
                   <source type="image/webp"
                     srcset="img/jpg/rice-small-mobile@1x.webp 1x, img/jpg/rice-small-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)"
-                    srcset="img/png/rice-small-desktop@1x.png, img/png/rice-small-desktop@2x.png">
+                    srcset="img/png/rice-small-desktop@1x.png 1x, img/png/rice-small-desktop@2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/png/rice-small-tablet@1x.png, img/png/rice-small-tablet@2x.png">
+                    srcset="img/png/rice-small-tablet@1x.png 1x, img/png/rice-small-tablet@2x.png 2x">
                   <img class="product__img" src="img/jpg/rice-small-mobile@1x.jpg"
                     srcset="img/jpg/rice-small-mobile@2x.jpg" alt="Порция со вкусом риса, 500 г">
                 </picture>
@@ -441,7 +443,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/navigation-menu.js"></script>
+  <script src="js/navigation-menu-min.js"></script>
 </body>
 
 </html>
