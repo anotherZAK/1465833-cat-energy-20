@@ -14,7 +14,6 @@ const svgstore = require("gulp-svgstore");
 const svgclear = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const del = require("del");
-const posthtml = require("gulp-posthtml");
 
 // Styles
 
@@ -45,14 +44,14 @@ exports.copy = copy;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(posthtml())
     .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
 
 const images = () => {
-  return gulp.src("source/img/**/*.svg").pipe(imagemin([imagemin.svgo()]));
+  return gulp.src("source/img/**/*.svg")
+    .pipe(imagemin([imagemin.svgo()]));
 }
 
 exports.images = images;
@@ -110,7 +109,9 @@ const stylesMin = () => {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename({suffix: "-min"}))
+    .pipe(rename({
+      suffix: "-min"
+    }))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -118,14 +119,16 @@ const stylesMin = () => {
 
 exports.stylesMin = stylesMin;
 
-const jsstyles = () => {
+const jsStyles = () => {
   return gulp.src("source/js/*.js")
     .pipe(jsmin())
-    .pipe(rename({suffix: "-min"}))
+    .pipe(rename({
+      suffix: "-min"
+    }))
     .pipe(gulp.dest("build/js"));
 }
 
-exports.jsstyles = jsstyles;
+exports.jsStyles = jsStyles;
 
 // Server
 
@@ -146,14 +149,18 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series("stylesMin"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
-exports.start = gulp.series(
-  styles, server, watcher
-);
+const build = (done) => {
+  gulp.series(
+    clean, copy, cleanSprite, html, styles, stylesMin, jsStyles
+  )(done);
+};
 
-exports.build = gulp.series(
-  clean, copy, cleanSprite, html, styles, stylesMin, jsstyles
+exports.build = build;
+
+exports.start = gulp.series(
+  build, server, watcher
 );

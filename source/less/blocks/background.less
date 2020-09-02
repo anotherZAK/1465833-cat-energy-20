@@ -47,13 +47,13 @@
 
     &--example {
       background-image: linear-gradient(0deg, #f2f2f2 72%, #ffffff 72% 100%);
-      z-index: -2;
+      z-index: 0;
     }
 
     &--example::after {
       position: absolute;
       content: "";
-      width: 27.5%;
+      width: calc(50% - 325px);
       height: 72%;
       bottom: 0;
       right: 0;
