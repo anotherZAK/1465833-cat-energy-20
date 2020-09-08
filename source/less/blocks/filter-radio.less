@@ -24,6 +24,11 @@
     border-radius: 50%;
   }
 
+  .filter-radio__data:hover + &::before,
+  .filter-radio__data:focus + &::before {
+    border-color: #bababa;
+  }
+
   .filter-radio__data:checked + &::after {
     position: absolute;
     content: "";
@@ -35,7 +40,7 @@
     border-radius: 50%;
   }
 
-  .filter-radio__data:disabled + & {
+  .filter-radio__data:active + & {
     opacity: 0.3;
   }
 }
