@@ -17,8 +17,13 @@
   display: block;
 }
 
-.filter-checkbox__data:disabled + .filter-checkbox__tick,
-.filter-checkbox__data:disabled ~ .filter-checkbox__name {
+.filter-checkbox__data:hover ~ .filter-checkbox__name::before,
+.filter-checkbox__data:focus ~ .filter-checkbox__name::before {
+  border-color: #bababa;
+}
+
+.filter-checkbox__data:active + .filter-checkbox__tick,
+.filter-checkbox__data:active ~ .filter-checkbox__name {
   opacity: 0.3;
 }
 

@@ -38,7 +38,7 @@ const cleanSprite = () => {
   return del("build/img/svg/forSprite");
 }
 
-exports.clean = cleanSprite;
+exports.cleanSprite = cleanSprite;
 
 exports.copy = copy;
 

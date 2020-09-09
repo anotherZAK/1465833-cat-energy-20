@@ -13,6 +13,7 @@
 
 .example__info {
   margin: 0;
+  width: 99%;
   font-family: @add-font;
   font-size: 14px;
   line-height: 18px;
@@ -192,7 +193,7 @@
   .example {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     padding-top: 0;
   }
 
@@ -202,13 +203,18 @@
   }
 
   .example__info {
-    margin-top: 60px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 141px;
     margin-bottom: 0;
     width: 435px;
   }
 
   .example-result {
+    margin-top: 30px;
     margin-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 
   .example-result__info {
@@ -244,6 +250,7 @@
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: -1;
+    align-self: center;
   }
 
   .example__slider-controls {

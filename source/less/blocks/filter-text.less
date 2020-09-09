@@ -1,7 +1,7 @@
 .filter-text {
   display: flex;
   position: relative;
-  align-items: baseline;
+  height: 45px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -9,6 +9,7 @@
 }
 
 .filter-text__name {
+  margin-top: 14px;
   margin-right: 11px;
 }
 
@@ -19,13 +20,20 @@
   flex-grow: 1;
   font-family: inherit;
   text-transform: inherit;
+  font-size: 16px;
+  line-height: 18px;
   border: 1px solid #e7e7e7;
+
+  &:active {
+    border-width: 2px;
+    border-color: #444444;
+  }
 
   &--user-data {
     border-color: #cdcdcd;
   }
 
-  &--user-data:active + .filter-text__img {
+  &--user-data:focus + .filter-text__img {
     fill: @basic-green;
   }
 
@@ -33,17 +41,8 @@
     border-color: #ff8282;
   }
 
-  &:invalid:focus {
-    border-color: #ff8282;
-  }
-
-  &:invalid:focus + .filter-text__img {
+  &:invalid + .filter-text__img {
     fill: #ff8282;
-  }
-
-  &:focus {
-    border-width: 2px;
-    border-color: #444444;
   }
 }
 
@@ -55,34 +54,47 @@
 
 @media (min-width: @tablet-width) {
   .filter-text {
+    height: auto;
+    align-items: baseline;
     font-size: 20px;
     line-height: 30px;
   }
 
   .filter-text__name {
     margin-right: 16px;
+
+    &--shift {
+      margin-right: 21px;
+    }
   }
 
   .filter-text__data {
     margin-right: 36px;
     padding-top: 13px;
     padding-bottom: 12px;
-    padding-left: 15px;
+    padding-left: 22px;
     flex-grow: 1;
     font-size: 20px;
     line-height: 30px;
-    height: 58px;
+    height: 52px;
   }
 
   .filter-text__img {
-    top: 22px;
+    top: 23px;
     right: 53px;
+
+    &--phone {
+      top: 18px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .filter-text__data {
     margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 52px;
 
     &--user-data {
       min-width: 491px;
@@ -94,11 +106,15 @@
   }
 
   .filter-text__name {
-    margin-right: 24px;
+    margin-right: 16px;
+
+    &--shift {
+      margin-right: 25px;
+    }
   }
 
   .filter-text__img {
-    top: 22px;
+    top: 18px;
     right: 22px;
 
     &--phone {
