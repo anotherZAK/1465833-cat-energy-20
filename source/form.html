@@ -53,21 +53,22 @@
             <fieldset class="filter-item filter-item--cat-data">
               <ul class="form-list cat-data-list">
                 <li class="cat-data-list__item">
-                  <label class="filter-text filter-text--cat-name">
+                  <label class="filter-text">
                     <span class="filter-text__name">Имя:*</span>
+                    <!-- Дополнительный класс на ошибку при отправке незаполненных обязательный полей filter-text__data--error -->
                     <input class="filter-text__data" type="text" name="cat-name" placeholder="Барсик" required>
                   </label>
                 </li>
                 <li class="cat-data-list__item">
-                  <label class="filter-text filter-text--cat-weight">
+                  <label class="filter-text">
                     <span class="filter-text__name">Вес (кг):*</span>
                     <input class="filter-text__data" type="text" name="cat-weight" placeholder="7" required>
                   </label>
                 </li>
                 <li class="cat-data-list__item">
-                  <label class="filter-text filter-text--cat-age">
-                    <span class="filter-text__name filter-text__name--cat-age">Возраст&nbsp;(лет):*</span>
-                    <input class="filter-text__data" type="text" name="cat-age" placeholder="7" required>
+                  <label class="filter-text">
+                    <span class="filter-text__name">Возраст&nbsp;(лет):</span>
+                    <input class="filter-text__data" type="text" name="cat-age" placeholder="7">
                   </label>
                 </li>
               </ul>

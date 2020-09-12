@@ -11,7 +11,7 @@
 
 .filter-text__name {
   margin-top: 14px;
-  margin-right: 11px;
+  margin-right: 14px;
 
   &--shift {
     margin-right: 12px;
@@ -39,6 +39,15 @@
     box-shadow: inset 0 0 0 2px #444444;
   }
 
+  &:focus:invalid {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #ff8282;
+  }
+
+  &:focus:invalid + .filter-text__img {
+    fill: #ff8282;
+  }
+
   &--user-data {
     box-shadow: inset 0 0 0 1px #cdcdcd;
   }
@@ -47,11 +56,11 @@
     fill: @basic-green;
   }
 
-  &:invalid {
-    box-shadow: inset 0 0 0 1px #ff8282;
+  &--error {
+    box-shadow: inset 0 0 0 2px #ff8282;
   }
 
-  &:invalid + .filter-text__img {
+  &--error + .filter-text__img {
     fill: #ff8282;
   }
 }
@@ -72,7 +81,7 @@
   }
 
   .filter-text__name {
-    margin-right: 16px;
+    margin-right: 18px;
 
     &--shift {
       margin-right: 21px;
@@ -110,7 +119,7 @@
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 17px;
+    padding-left: 18px;
     height: 52px;
 
     &--user-data {
@@ -123,7 +132,7 @@
   }
 
   .filter-text__name {
-    margin-right: 16px;
+    margin-right: 19px;
 
     &--shift {
       margin-right: 21px;
