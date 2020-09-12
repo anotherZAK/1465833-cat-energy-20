@@ -11,7 +11,7 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-header overflow">
     <div class="container container--no-borders">
       <section class="header">
         <h2 class="visually-hidden">Главное меню</h2>
@@ -53,21 +53,22 @@
             <fieldset class="filter-item filter-item--cat-data">
               <ul class="form-list cat-data-list">
                 <li class="cat-data-list__item">
-                  <label class="filter-text filter-text--cat-name">
+                  <label class="filter-text">
                     <span class="filter-text__name">Имя:*</span>
+                    <!-- Дополнительный класс на ошибку при отправке незаполненных обязательный полей filter-text__data--error -->
                     <input class="filter-text__data" type="text" name="cat-name" placeholder="Барсик" required>
                   </label>
                 </li>
                 <li class="cat-data-list__item">
-                  <label class="filter-text filter-text--cat-weight">
+                  <label class="filter-text">
                     <span class="filter-text__name">Вес (кг):*</span>
                     <input class="filter-text__data" type="text" name="cat-weight" placeholder="7" required>
                   </label>
                 </li>
                 <li class="cat-data-list__item">
-                  <label class="filter-text filter-text--cat-age">
-                    <span class="filter-text__name">Возраст (лет):*</span>
-                    <input class="filter-text__data" type="text" name="cat-age" placeholder="7" required>
+                  <label class="filter-text">
+                    <span class="filter-text__name">Возраст&nbsp;(лет):</span>
+                    <input class="filter-text__data" type="text" name="cat-age" placeholder="7">
                   </label>
                 </li>
               </ul>
@@ -102,7 +103,7 @@
             <ul class="form-list user-list">
               <li class="user-list__item">
                 <label class="filter-text">
-                  <span class="filter-text__name filter-text__name--shift">Email:*</span>
+                  <span class="filter-text__name filter-text__name--shift">E-mail:*</span>
                   <input class="filter-text__data filter-text__data--user-data" type="email" name="user-email"
                     placeholder="kuklachev@gmail.com" required>
                   <svg class="filter-text__img filter-text__img--mail" width="20" height="14">
@@ -112,7 +113,8 @@
               </li>
               <li class="user-list__item">
                 <label class="filter-text">
-                  <span class="filter-text__name filter-text__name--shift">Телефон:*</span>
+                  <span
+                    class="filter-text__name filter-text__name--shift filter-text__name--shift-phone">Телефон:*</span>
                   <input class="filter-text__data filter-text__data--user-data filter-text__data--user-phone" type="tel"
                     name="user-tel" placeholder="8 (960) 900-60-90" required>
                   <svg class="filter-text__img filter-text__img--phone" width="20" height="20">
@@ -200,8 +202,8 @@
         <section class="page-footer__info">
           <h2 class="visually-hidden">Полезные ссылки</h2>
           <div class="footer-info">
-            <a class="footer-info__logo" href="index.html"><img class="footer-info__img" src="img/svg/logo-footer.svg" width="128"
-                height="23" alt="Логотип интернет-магазина"></a>
+            <a class="footer-info__logo" href="index.html"><img class="footer-info__img" src="img/svg/logo-footer.svg"
+                width="128" height="23" alt="Логотип интернет-магазина"></a>
             <div class="footer-info__social social">
               <ul class="social__list">
                 <li class="social__item">

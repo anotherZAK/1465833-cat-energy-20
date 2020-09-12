@@ -50,7 +50,6 @@
     &__tick {
       top: 8px;
       left: 14px;
-      fill: @basic-green;
     }
   }
 
@@ -62,6 +61,23 @@
       left: 3px;
       width: 40px;
       height: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-checkbox {
+    &__tick {
+      left: 11px;
+    }
+  }
+
+  .filter-checkbox__name {
+    padding-left: 59px;
+
+    &::before {
+      top: -5px;
+      left: 0;
     }
   }
 }
