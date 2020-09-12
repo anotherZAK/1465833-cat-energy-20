@@ -10,92 +10,70 @@
 
 .proposal__link {
   margin-bottom: 22px;
-  padding-left: 61px;
+  padding-top: 11px;
   padding-right: 51px;
+  padding-bottom: 11px;
+  padding-left: 51px;
 }
 
 .proposal__item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: @basic-grey;
   z-index: 1;
 
   &:last-child {
-    margin: 0;
-  }
-
-  &:nth-child(1) .pattern__title::before {
-    width: 36px;
-    height: 50px;
-    background-image: url(../img/svg/icon-cat-slim.svg);
-    background-repeat: no-repeat;
-  }
-
-  &:nth-child(2) .pattern__title::before {
-    width: 67px;
-    height: 28px;
-    background-image: url(../img/svg/icon-cat-pro.svg);
-    background-repeat: no-repeat;
+    margin-bottom: 0;
   }
 }
 
-@media (min-width:@tablet-width) {
+@media (min-width: @tablet-width) {
   .proposal {
     position: relative;
-  }
-
-  .proposal__list {
-    margin: 0 auto;
-    width: 708px;
+    margin-bottom: 45px;
   }
 
   .proposal__link {
     position: absolute;
-    top: -600px;
+    margin: 0;
+    margin-left: -4px;
+    padding-top: 17px;
+    padding-right: 27px;
+    padding-bottom: 17px;
+    padding-left: 25px;
+    min-width: 244px;
+    top: -578px;
     left: 87px;
+    font-size: 20px;
   }
 
   .proposal__item {
     margin-bottom: 30px;
-
-    &:nth-child(1) .pattern__title::before {
-      width: 140px;
-      height: 192px;
-    }
-  
-    &:nth-child(2) .pattern__title::before {
-      width: 268px;
-      height: 112px;
-    }
   }
 }
 
-@media (min-width:@desktop-width) {
-  .proposal__list {
-    width: auto;
-  }
-
-  .proposal__link {
-    position: absolute;
-    top: -400px;
+@media (min-width: @desktop-width) {
+  .proposal {
+    margin-top: 81px;
+    margin-bottom: 43px;
   }
 
   .proposal__list {
     display: flex;
     flex-wrap: wrap;
+    width: auto;
+  }
+
+  .proposal__link {
+    position: absolute;
+    margin-left: -6px;
+    top: -319px;
   }
 
   .proposal__item {
-    margin: 0;
     flex-basis: 570px;
 
-    &:nth-child(1) .pattern__title::before {
-      width: 70px;
-      height: 97px;
-    }
-  
-    &:nth-child(2) .pattern__title::before {
-      width: 134px;
-      height: 56px;
+    &:last-child {
+      margin-bottom: 30px;
     }
   }
 

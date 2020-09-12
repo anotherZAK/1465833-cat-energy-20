@@ -2,12 +2,20 @@
   margin-bottom: 14px;
 }
 
+@media (min-width: @tablet-width) {
+  .user-list__item {
+    margin-bottom: 20px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .user-list {
     display: flex;
   }
 
   .user-list__item {
-    flex-grow: 1;
+    &:nth-child(2n) {
+      margin-left: 70px;
+    }
   }
 }

@@ -1,6 +1,8 @@
-var burgerToggle = document.querySelector(".burger");
+var burgerToggle = document.querySelector(".main-nav");
+
+burgerToggle.classList.remove("main-nav--nojs");
 
 burgerToggle.addEventListener("click", function (evt) {
-  burgerToggle.classList.toggle("burger--opened");
-  burgerToggle.classList.toggle("burger--closed");
+  burgerToggle.classList.toggle("main-nav--opened");
+  burgerToggle.classList.toggle("main-nav--closed");
 });
