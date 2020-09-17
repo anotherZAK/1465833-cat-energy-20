@@ -2314,7 +2314,7 @@ img {
 .filter-text__data:hover {
   box-shadow: inset 0 0 0 1px #cdcdcd;
 }
-.filter-text__data:active {
+.filter-text__data:focus {
   box-shadow: inset 0 0 0 2px #444444;
 }
 .filter-text__data:focus {
@@ -2635,7 +2635,7 @@ img {
 .filter-textarea__area:hover {
   border-color: #cdcdcd;
 }
-.filter-textarea__area:active {
+.filter-textarea__area:focus {
   box-shadow: inset 0 0 0 2px #444444;
 }
 .filter-textarea__area:focus {
